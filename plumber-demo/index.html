@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClearFlow Plumbing — Reliable Plumbing Solutions</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🚰</div>
+      <span>ClearFlow Plumbing</span>
+    </div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="requestBtn" class="btn primary">Request Service</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Fast, Reliable Plumbing Solutions</h1>
+      <p>From leaks to installations, ClearFlow Plumbing has you covered. Serving homes and businesses with 24/7 emergency support.</p>
+      <div class="cta-row">
+        <button id="requestBtn2" class="btn primary">Request Service</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <div class="img">🪠</div>
+        <h3>Drain Cleaning</h3>
+        <p>Clogged drains cleared fast with professional tools and expertise.</p>
+      </div>
+      <div class="card">
+        <div class="img">🔧</div>
+        <h3>Pipe Repair</h3>
+        <p>Fixing leaks and replacing damaged pipes with long-lasting solutions.</p>
+      </div>
+      <div class="card">
+        <div class="img">🔥</div>
+        <h3>Water Heater Install</h3>
+        <p>Energy-efficient water heater installation and maintenance services.</p>
+      </div>
+      <div class="card">
+        <div class="img">🚨</div>
+        <h3>Emergency Callouts</h3>
+        <p>Available 24/7 for urgent plumbing issues. We’re just a call away.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-card">
+      <h2>Why Choose ClearFlow?</h2>
+      <p>Our licensed plumbers bring years of experience and a commitment to customer satisfaction. We use the latest technology and provide upfront pricing so there are no surprises.</p>
+      <ul>
+        <li>✅ Licensed & insured professionals</li>
+        <li>✅ 24/7 emergency services</li>
+        <li>✅ Satisfaction guaranteed</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <div>
+        <h3>Hours</h3>
+        <p>Mon–Fri 8am–6pm<br>24/7 Emergency Support</p>
+      </div>
+      <div>
+        <h3>Location</h3>
+        <p>456 Service Rd, Your City</p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <p>(555) 987‑6543</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ClearFlow Plumbing — Demo site for Tony Web Solutions</p>
+  </footer>
+
+  <!-- Request Service Modal -->
+  <div id="serviceModal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="serviceTitle">
+    <div class="modal-content">
+      <button class="close" id="closeModal">×</button>
+      <h3 id="serviceTitle">Request Service</h3>
+      <form id="serviceForm" action="https://formspree.io/f/xovlzvzd" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone">
+
+        <label for="message">Issue</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit" class="btn primary">Submit Request</button>
+      </form>
+      <p class="note">This is a demo — submissions go to your Formspree inbox.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
