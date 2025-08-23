@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
   color: #333;
 }
 
@@ -13,21 +12,36 @@ a {
   text-decoration: none;
 }
 
+/* Hero Section (Split Layout) */
 .hero {
-  background: url('https://source.unsplash.com/1600x800/?fashion') no-repeat center center/cover;
-  height: 100vh;
-  color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  flex-wrap: wrap;
+  min-height: 90vh;
 }
 
-.hero .overlay {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 10px;
+.hero-text {
+  flex: 1;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  flex: 1;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .btn {
@@ -35,21 +49,27 @@ a {
   background: #e83e8c;
   color: white;
   padding: 12px 20px;
-  margin-top: 15px;
+  margin-top: 20px;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-.about, .contact {
+.btn:hover {
+  background: #c71e6f;
+}
+
+/* Collection Grid */
+.collection {
   padding: 50px 20px;
   text-align: center;
 }
 
-.collection {
+.grid {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 40px 20px;
+  margin-top: 30px;
 }
 
 .product {
@@ -57,30 +77,70 @@ a {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 20px;
-  width: 300px;
+  width: 280px;
   text-align: center;
 }
 
 .product img {
   max-width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.contact form {
+/* Lookbook Gallery */
+.lookbook {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gallery {
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
 }
 
-.contact input, .contact button {
+.gallery img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newsletter input {
   padding: 12px;
-  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 250px;
 }
 
-.contact button {
+.newsletter button {
+  padding: 12px 20px;
+  border: none;
   background: #e83e8c;
   color: #fff;
-  border: none;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #c71e6f;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
 }
