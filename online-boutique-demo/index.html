@@ -7,14 +7,52 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header><h1>Online Boutique</h1></header>
-  <main>
-    <section>
-      <h2>Shop Our Collection</h2>
-      <p>Demo e-commerce boutique for showcasing products.</p>
-      <div class="product">Sample Product - $29.99</div>
-    </section>
-  </main>
-  <script src="assets/js/app.js"></script>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>Style That Inspires</h1>
+      <p>Trendy fashion pieces, handpicked for you</p>
+      <a href="#collection" class="btn">Shop the Collection</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <h2>Welcome to Our Boutique</h2>
+    <p>Discover unique clothing and accessories that make you stand out. Perfect for any occasion.</p>
+  </section>
+
+  <!-- Collection -->
+  <section id="collection" class="collection">
+    <div class="product">
+      <img src="https://source.unsplash.com/400x250/?dress" alt="Summer Dress">
+      <h3>Summer Dress</h3>
+      <p>$49.99</p>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/400x250/?handbag" alt="Designer Handbag">
+      <h3>Designer Handbag</h3>
+      <p>$89.99</p>
+    </div>
+    <div class="product">
+      <img src="https://source.unsplash.com/400x250/?sneakers" alt="Sneakers">
+      <h3>Classic Sneakers</h3>
+      <p>$59.99</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Stay in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <button type="submit">Join Our Newsletter</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Online Boutique Demo</p>
+  </footer>
 </body>
 </html>
