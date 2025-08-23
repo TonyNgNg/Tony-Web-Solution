@@ -1,1 +1,86 @@
-body{font-family:Arial,sans-serif;background:#f0fff0;color:#222;text-align:center;}header{background:#28a745;color:white;padding:1em;}button{padding:10px 20px;margin-top:20px;}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 0 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/1600x800/?fitness') no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.about, .contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.service {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.service img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input, .contact button {
+  padding: 12px;
+  margin: 10px 0;
+}
+
+.contact button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
