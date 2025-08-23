@@ -1,1 +1,0 @@
-console.log('Bakery demo loaded');
