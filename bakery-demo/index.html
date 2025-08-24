@@ -1,55 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Bakery Demo</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meadow & Hearth Bakery — Fresh, Seasonal Bakes</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fffdf9;
+      --ink:#1b1b1b;
+      --muted:#666;
+      --brand:#2e5d47;      /* deep herb green */
+      --accent:#e9b889;     /* warm pastry */
+      --card:#ffffff;
+      --border:#ece7df;
+      --shadow:0 6px 20px rgba(0,0,0,.06);
+      --radius:16px;
+      --space: clamp(16px, 3vw, 40px);
+      --max: 1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 var(--space)}
+    .btn{
+      display:inline-block;padding:.9rem 1.1rem;border-radius:999px;
+      background:var(--brand);color:#fff;font-weight:600;letter-spacing:.2px;
+      box-shadow:var(--shadow);transition:transform .15s ease, opacity .15s ease;
+    }
+    .btn:hover{transform:translateY(-2px);opacity:.95}
+    .btn.alt{background:#fff;color:var(--brand);border:1px solid var(--border)}
+    .pill{display:inline-block;padding:.35rem .75rem;border-radius:999px;background:#f3efe8;color:#7a6b5b;font-weight:600;font-size:.8rem;letter-spacing:.3px}
+    .title{font: clamp(2rem,4vw,3.25rem)/1.1 "Playfair Display", serif; letter-spacing:.2px}
+    .sub{color:var(--muted)}
+    .grid{display:grid;gap:clamp(16px,2.5vw,28px)}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden
+    }
+    .heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:1rem}
+    header{
+      position:sticky;top:0;z-index:20;background:rgba(255,253,249,.8);backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--border)
+    }
+    nav.container{display:flex;align-items:center;gap:20px;padding:.9rem var(--space)}
+    .logo{font:700 1.05rem Inter, sans-serif;letter-spacing:.15rem;text-transform:uppercase}
+    .navlinks{margin-left:auto;display:flex;gap:18px}
+    .navlinks a{color:#2f2f2f;font-weight:600}
+    /* hero */
+    .hero{
+      position:relative;min-height:72vh;display:grid;place-items:center;isolation:isolate;overflow:hidden
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;background:
+        linear-gradient(180deg, rgba(0,0,0,.30), rgba(0,0,0,.35)),
+        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;background-position:center;z-index:-1;
+      transform:scale(1.03)
+    }
+    .hero .inner{color:#fff;text-align:center;padding:12vh var(--space)}
+    .hero h1{font: clamp(2.4rem, 6vw, 4.2rem)/1.05 "Playfair Display", serif;margin:0 0 .6rem}
+    .hero p{font-size:clamp(1rem, 2.2vw, 1.2rem);opacity:.95;margin:0 auto 1.2rem;max-width:760px}
+    .bar{display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:.45rem .7rem;border-radius:999px;margin-bottom:14px}
+    .bar .dot{width:8px;height:8px;border-radius:50%;background:#9ee5b1}
+    /* sections */
+    section{padding: clamp(48px, 8vw, 96px) 0}
+    .two{grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 900px){ .two{grid-template-columns:1fr} .navlinks{display:none} }
+    /* feature cards */
+    .feature img{aspect-ratio: 3/2;object-fit:cover;width:100%}
+    .feature .body{padding:18px}
+    .feature h3{margin:.2rem 0 .35rem;font:700 1.15rem Inter}
+    .feature p{margin:0;color:var(--muted)}
+    /* menu */
+    .menu{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){ .menu{grid-template-columns:1fr 1fr} }
+    @media (max-width:640px){ .menu{grid-template-columns:1fr} }
+    .menu .pic{aspect-ratio:1/1;object-fit:cover}
+    .menu .row{display:flex;justify-content:space-between;gap:10px;font-weight:600}
+    .price{color:#775f4a}
+    /* banner */
+    .banner{background:linear-gradient(145deg,#f7efe4,#f2eadf);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,3vw,28px)}
+    .banner .wrap{display:flex;align-items:center;gap:24px}
+    .banner img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+    @media (max-width:700px){ .banner .wrap{flex-direction:column;align-items:flex-start} }
+    /* gallery */
+    .masonry{columns: 3; column-gap:20px}
+    .masonry img{width:100%;margin:0 0 20px;border-radius:14px}
+    @media (max-width:900px){ .masonry{columns:2} }
+    @media (max-width:600px){ .masonry{columns:1} }
+    /* hours/visit */
+    .visit .card{overflow:hidden}
+    .visit .map iframe{border:0;width:100%;height:340px;display:block}
+    footer{padding:36px 0;border-top:1px solid var(--border);color:#7a7a7a}
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay">
-      <h1>Freshly Baked Every Morning</h1>
-      <p>Artisan breads, pastries, and cakes made with love.</p>
-      <a href="#contact" class="btn">Order Now</a>
-    </div>
+
+  <!-- Header -->
+  <header>
+    <nav class="container">
+      <div class="logo">Meadow & Hearth Bakery</div>
+      <div class="navlinks">
+        <a href="#menu">Menu</a>
+        <a href="#seasonal">Seasonal</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+        <a class="btn" href="#preorder">Pre-Order</a>
+      </div>
+    </nav>
   </header>
 
-  <section class="about">
-    <h2>Why Choose Our Bakery?</h2>
-    <p>We use only organic ingredients, bake fresh daily, and create unique recipes that bring joy to your table.</p>
-  </section>
-
-  <section class="products">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484f2?auto=format&fit=crop&w=600&q=80" alt="Bread">
-      <h3>Artisan Bread</h3>
-      <p>$4.99</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1612197528889-98c0c7a24955?auto=format&fit=crop&w=600&q=80" alt="Cake">
-      <h3>Chocolate Cake</h3>
-      <p>$14.99</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1606756790138-8bff1e101f5c?auto=format&fit=crop&w=600&q=80" alt="Croissant">
-      <h3>Butter Croissant</h3>
-      <p>$2.99</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="inner container">
+      <div class="bar"><span class="dot"></span> small-batch • naturally leavened • seasonal</div>
+      <h1>Fresh, Seasonal Bakes—Daily.</h1>
+      <p>Slow-fermented sourdough loaves, rustic pastries, and thoughtful coffee.
+         Baked each morning with stone-milled flour and local ingredients.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="#menu" class="btn">See Today’s Menu</a>
+        <a href="#visit" class="btn alt">Hours & Location</a>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Place Your Order</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Order Details" required></textarea>
-      <button type="submit">Send Order</button>
-    </form>
+  <!-- Signature items -->
+  <section class="container" id="menu">
+    <div class="heading">
+      <h2 class="title">Signature Bakes</h2>
+      <a class="pill" href="#preorder">Pre-order by 6pm for next-day pickup</a>
+    </div>
+
+    <div class="grid menu">
+      <!-- Card 1 -->
+      <article class="card feature">
+        <img class="pic" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=1200&auto=format&fit=crop" alt="Country Sourdough">
+        <div class="body">
+          <div class="row"><h3>Country Sourdough</h3><span class="price">$7</span></div>
+          <p>72-hour levain, blistered crust, open crumb. Our daily loaf.</p>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="card feature">
+        <img class="pic" src="https://images.unsplash.com/photo-1542996966-2e31c00bae30?q=80&w=1200&auto=format&fit=crop" alt="Morning Bun">
+        <div class="body">
+          <div class="row"><h3>Cardamom Morning Bun</h3><span class="price">$5</span></div>
+          <p>Laminate dough, citrus sugar, a hint of cardamom & vanilla.</p>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="card feature">
+        <img class="pic" src="https://images.unsplash.com/photo-1600359754336-6dfd4a9f8b3d?q=80&w=1200&auto=format&fit=crop" alt="Seasonal Galette">
+        <div class="body">
+          <div class="row"><h3>Seasonal Fruit Galette</h3><span class="price">$6</span></div>
+          <p>Buttery crust with peak-season fruit from local farms.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 TWS Bakery Demo</p>
+  <!-- Seasonal banner -->
+  <section class="container" id="seasonal">
+    <div class="banner">
+      <div class="wrap">
+        <img src="https://images.unsplash.com/photo-1609727483783-9c6b2c2f9ce0?q=80&w=600&auto=format&fit=crop" alt="Strawberry">
+        <div>
+          <div class="pill" style="margin-bottom:8px">Seasonal Feature</div>
+          <h3 class="title" style="font-size:clamp(1.4rem,3vw,2rem);margin:.2rem 0 .4rem">Strawberry Rhubarb Danish</h3>
+          <p class="sub">House-made compote, cultured butter pastry, vanilla glaze. Available Thu–Sun while fruit lasts.</p>
+          <div style="margin-top:10px"><a class="btn" href="#preorder">Reserve Yours</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About + Image -->
+  <section class="container">
+    <div class="grid two">
+      <div class="card" style="overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1546491764-67a5b8e3e9c2?q=80&w=1300&auto=format&fit=crop" alt="Baker shaping dough" />
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center">
+        <h2 class="title">Naturally Leavened & Stone-Milled</h2>
+        <p class="sub">We bake with organic flour, seasonal produce, and long, cold fermentation for deep flavor and better keeping qualities. Our menu changes throughout the year to celebrate what’s fresh from nearby growers.</p>
+        <div style="margin-top:10px"><a class="btn" href="#gallery">See the Process</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container" id="gallery">
+    <div class="heading">
+      <h2 class="title">From the Bench</h2>
+      <a class="pill" href="https://instagram.com" target="_blank" rel="noreferrer">Follow on Instagram</a>
+    </div>
+    <div class="masonry">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1000&auto=format&fit=crop" alt="">
+      <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=1000&auto=format&fit=crop" alt="">
+      <img src="https://images.unsplash.com/photo-1526312426976-593c2b99905f?q=80&w=1000&auto=format&fit=crop" alt="">
+      <img src="https://images.unsplash.com/photo-1555507039-6f6e6b7965a7?q=80&w=1000&auto=format&fit=crop" alt="">
+      <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?q=80&w=1000&auto=format&fit=crop" alt="">
+      <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1000&auto=format&fit=crop" alt="">
+    </div>
+  </section>
+
+  <!-- Visit / Hours -->
+  <section class="container visit" id="visit">
+    <div class="grid two">
+      <div class="card" style="padding:22px">
+        <h2 class="title" style="margin:.2rem 0 8px">Visit Us</h2>
+        <p class="sub">123 Flour Street, Suite A • Meadowview</p>
+        <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px">
+          <div class="card" style="padding:14px">
+            <strong>Hours</strong>
+            <p style="margin:.4rem 0 0">
+              Wed–Fri: 7a–2p<br>
+              Sat–Sun: 8a–2p<br>
+              Mon–Tue: Closed
+            </p>
+          </div>
+          <div class="card" style="padding:14px">
+            <strong>Contact</strong>
+            <p style="margin:.4rem 0 0">
+              hello@meadowhearth.com<br>
+              (555) 123-0184
+            </p>
+          </div>
+        </div>
+        <div id="preorder" style="margin-top:14px">
+          <a class="btn" href="mailto:hello@meadowhearth.com?subject=Pre-Order">Pre-Order by Email</a>
+        </div>
+      </div>
+      <div class="card map">
+        <iframe
+          src="https://www.google.com/maps?q=Seattle&z=12&output=embed"
+          loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Meadow & Hearth Bakery</div>
+      <div class="sub">Baked fresh daily • walk-ins welcome • limited quantities</div>
+    </div>
   </footer>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
