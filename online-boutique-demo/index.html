@@ -1,68 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Boutique Demo</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Urban Threads Boutique</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand:#e60023; /* Target-like red */
+      --ink:#111;
+      --bg:#fafafa;
+      --border:#ddd;
+      --radius:10px;
+      --shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    header{background:#fff;border-bottom:1px solid var(--border);box-shadow:0 2px 6px rgba(0,0,0,.05);position:sticky;top:0;z-index:20}
+    .nav{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:20px}
+    .logo{font-weight:700;font-size:1.2rem;color:var(--brand)}
+    .links{margin-left:auto;display:flex;gap:18px;align-items:center}
+    .links a{font-weight:600}
+    .cart{background:var(--brand);color:#fff;padding:6px 12px;border-radius:999px;font-size:.9rem}
+
+    .hero{background:url('https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      min-height:60vh;display:grid;place-items:center;position:relative;color:#fff;text-align:center}
+    .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+    .hero .inner{position:relative;padding:40px}
+    .hero h1{font-size:clamp(2rem,5vw,3rem);margin:0 0 12px}
+    .hero p{font-size:1.1rem;opacity:.9;margin-bottom:20px}
+    .btn{background:var(--brand);color:#fff;padding:.75rem 1.5rem;border-radius:6px;font-weight:600;transition:.2s}
+    .btn:hover{opacity:.9}
+
+    section{max-width:1200px;margin:0 auto;padding:60px 20px}
+    h2{font-size:1.6rem;margin:0 0 28px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+    .card img{aspect-ratio:4/3;object-fit:cover}
+    .card .body{padding:16px;flex:1;display:flex;flex-direction:column}
+    .card h3{font-size:1.1rem;margin:0 0 8px}
+    .price{font-weight:700;margin-top:auto;margin-bottom:12px;color:var(--brand)}
+    .btn.small{padding:.55rem 1rem;font-size:.9rem;border-radius:4px;text-align:center}
+
+    footer{background:#111;color:#eee;padding:30px 20px;margin-top:40px}
+    footer .wrap{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+    footer a{color:#eee;font-size:.9rem}
+  </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Discover Your Style</h1>
-      <p>Handpicked fashion pieces for modern living.</p>
-      <a href="#collection" class="btn">Shop Now</a>
-    </div>
-    <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=800&q=80" alt="Fashion Model">
-    </div>
-  </section>
 
-  <!-- Featured Collection -->
-  <section id="collection" class="collection">
-    <h2>Featured Collection</h2>
-    <div class="grid">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Casual Outfit">
-        <h3>Casual Outfit</h3>
-        <p>$59.99</p>
+<header>
+  <div class="nav">
+    <div class="logo">Urban Threads</div>
+    <div class="links">
+      <a href="#">Women</a>
+      <a href="#">Men</a>
+      <a href="#">Accessories</a>
+      <a href="#">Sale</a>
+      <a href="#" class="cart">Cart (0)</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <h1>Fall Collection 2025</h1>
+    <p>Modern streetwear meets timeless comfort. Shop the latest arrivals now.</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section id="shop">
+  <h2>Featured Products</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop" alt="Jacket">
+      <div class="body">
+        <h3>Classic Denim Jacket</h3>
+        <div class="price">$69.99</div>
+        <a href="#" class="btn small">Add to Cart</a>
       </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1520975918311-7c4d71f63519?auto=format&fit=crop&w=400&q=80" alt="Elegant Dress">
-        <h3>Elegant Dress</h3>
-        <p>$79.99</p>
-      </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1542060748-10c28b62716c?auto=format&fit=crop&w=400&q=80" alt="Accessories">
-        <h3>Accessories</h3>
-        <p>$29.99</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618354691249-6157f6a9250c?q=80&w=800&auto=format&fit=crop" alt="Sneakers">
+      <div class="body">
+        <h3>Urban Runner Sneakers</h3>
+        <div class="price">$89.99</div>
+        <a href="#" class="btn small">Add to Cart</a>
       </div>
     </div>
-  </section>
-
-  <!-- Lookbook -->
-  <section class="lookbook">
-    <h2>Style Inspiration</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1520975968864-12dfc8d4932e?auto=format&fit=crop&w=600&q=80" alt="Look 1">
-      <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?auto=format&fit=crop&w=600&q=80" alt="Look 2">
-      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=600&q=80" alt="Look 3">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1528701800489-20be9c5fa2b5?q=80&w=800&auto=format&fit=crop" alt="Tote Bag">
+      <div class="body">
+        <h3>Everyday Canvas Tote</h3>
+        <div class="price">$34.99</div>
+        <a href="#" class="btn small">Add to Cart</a>
+      </div>
     </div>
-  </section>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618354691039-3c40c1a2a7f6?q=80&w=800&auto=format&fit=crop" alt="Hoodie">
+      <div class="body">
+        <h3>Cozy Zip Hoodie</h3>
+        <div class="price">$54.99</div>
+        <a href="#" class="btn small">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <h2>Join Our Newsletter</h2>
-    <p>Be the first to know about new arrivals and exclusive offers.</p>
-    <form>
-      <input type="email" placeholder="Your Email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="y"></span> Urban Threads Boutique</div>
+    <div style="display:flex;gap:14px">
+      <a href="#">Contact</a>
+      <a href="#">Returns</a>
+      <a href="#">Privacy</a>
+    </div>
+  </div>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 TWS Online Boutique Demo</p>
-  </footer>
+<script>
+  document.getElementById('y').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
