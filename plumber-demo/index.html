@@ -1,121 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ClearFlow Plumbing — Reliable Plumbing Solutions</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INM Plumbing — Fast, Reliable Local Plumbers</title>
+  <meta name="description" content="Same-day plumbing repairs, leak detection, water heater installs. Licensed & insured." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#0b6c8e;--brand-700:#084e66;--accent:#ffd166;--ink:#10212b;--muted:#5e7380;
+      --bg:#f7fbfd;--card:#ffffff;--radius:16px;--shadow:0 10px 30px rgba(16,33,43,.08)
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Nunito,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+    .logo{display:flex;gap:10px;align-items:center;font:700 18px Inter,sans-serif}
+    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-700));display:grid;place-items:center;color:#fff}
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+    .cta{background:var(--accent);color:#1a1a1a;padding:10px 16px;border-radius:12px;font-weight:700}
+    .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;margin:28px 0 8px}
+    .panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#e8f4f8;color:var(--brand-700);padding:6px 10px;border-radius:999px;font-weight:600}
+    h1{font:700 40px/1.1 Inter, sans-serif;margin:14px 0}
+    .kickers{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;color:var(--muted)}
+    .kickers span{display:flex;gap:8px;align-items:center;background:#fff;border:1px solid #e7edf1;border-radius:999px;padding:6px 10px}
+    .hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#dfeff6;min-height:320px;display:grid;place-items:center}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin:26px 0}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .card h3{font:700 18px Inter;margin:8px 0}
+    .cta-bar{position:sticky;bottom:12px;display:flex;justify-content:center}
+    .cta-bar a{background:linear-gradient(135deg,var(--brand),var(--brand-700));color:#fff;padding:14px 20px;border-radius:999px;font-weight:700;box-shadow:0 10px 24px rgba(11,108,142,.25)}
+    footer{color:var(--muted);padding:30px 0}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo">🚰</div>
-      <span>ClearFlow Plumbing</span>
-    </div>
-    <nav class="nav">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <button id="requestBtn" class="btn primary">Request Service</button>
-    </nav>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="logo"><div class="logo-badge">🔧</div>INM Plumbing</div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a class="cta" href="#contact">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Fast, Reliable Plumbing Solutions</h1>
-      <p>From leaks to installations, ClearFlow Plumbing has you covered. Serving homes and businesses with 24/7 emergency support.</p>
-      <div class="cta-row">
-        <button id="requestBtn2" class="btn primary">Request Service</button>
+    <section class="hero">
+      <div class="panel">
+        <span class="badge">Same-Day Service • Licensed & Insured</span>
+        <h1>Fast, Reliable Plumbing for Homes & Businesses</h1>
+        <p>From leaks and clogs to water heater installs—we’ve got you covered. Upfront pricing, friendly techs, and jobs done right the first time.</p>
+        <div class="kickers">
+          <span>✅ 24/7 Emergency</span><span>✅ No-mess Guarantee</span><span>✅ Financing Available</span>
+        </div>
+        <p style="margin-top:18px">
+          <a class="cta" href="#contact">Book Service</a>
+          &nbsp; or call <a href="tel:+15551234567"> (555) 123-4567</a>
+        </p>
       </div>
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="card">
-        <div class="img">🪠</div>
-        <h3>Drain Cleaning</h3>
-        <p>Clogged drains cleared fast with professional tools and expertise.</p>
+      <div class="hero-img">
+        <!-- Replace with your own photo -->
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop" alt="Plumber working under sink" style="width:100%;height:100%;object-fit:cover">
       </div>
-      <div class="card">
-        <div class="img">🔧</div>
-        <h3>Pipe Repair</h3>
-        <p>Fixing leaks and replacing damaged pipes with long-lasting solutions.</p>
-      </div>
-      <div class="card">
-        <div class="img">🔥</div>
-        <h3>Water Heater Install</h3>
-        <p>Energy-efficient water heater installation and maintenance services.</p>
-      </div>
-      <div class="card">
-        <div class="img">🚨</div>
-        <h3>Emergency Callouts</h3>
-        <p>Available 24/7 for urgent plumbing issues. We’re just a call away.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="about">
-    <div class="about-card">
-      <h2>Why Choose ClearFlow?</h2>
-      <p>Our licensed plumbers bring years of experience and a commitment to customer satisfaction. We use the latest technology and provide upfront pricing so there are no surprises.</p>
-      <ul>
-        <li>✅ Licensed & insured professionals</li>
-        <li>✅ 24/7 emergency services</li>
-        <li>✅ Satisfaction guaranteed</li>
-      </ul>
-    </div>
-  </section>
+    <section id="services" class="grid">
+      <article class="card"><h3>Leak Detection</h3><p>Pinpoint leaks fast with non-invasive tools. Protect your home from hidden water damage.</p></article>
+      <article class="card"><h3>Water Heaters</h3><p>Tank & tankless installs, repairs, maintenance—energy-efficient options available.</p></article>
+      <article class="card"><h3>Drain Cleaning</h3><p>Hydro-jetting and rooter service for stubborn clogs. Same-day availability.</p></article>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-grid">
-      <div>
-        <h3>Hours</h3>
-        <p>Mon–Fri 8am–6pm<br>24/7 Emergency Support</p>
-      </div>
-      <div>
-        <h3>Location</h3>
-        <p>456 Service Rd, Your City</p>
-      </div>
-      <div>
-        <h3>Phone</h3>
-        <p>(555) 987‑6543</p>
-      </div>
-    </div>
-  </section>
+    <section id="areas" class="panel">
+      <h2 style="font:700 26px Inter;margin:0 0 10px">Service Areas</h2>
+      <p>Serving <strong>Downtown, Northside, Westbrook, and Riverside</strong>. Not sure if we cover your area? <a href="#contact">Ask us</a>.</p>
+    </section>
 
-  <footer class="footer">
-    <p>© 2025 ClearFlow Plumbing — Demo site for Tony Web Solutions</p>
-  </footer>
+    <section id="reviews" class="grid">
+      <article class="card"><h3>“Super fast & professional.”</h3><p>They fixed our burst pipe the same day. Highly recommend! — Maria G.</p></article>
+      <article class="card"><h3>“Upfront pricing.”</h3><p>No surprises and spotless cleanup. — Devin T.</p></article>
+      <article class="card"><h3>“Will use again.”</h3><p>Great communication and quality work. — Omar R.</p></article>
+    </section>
 
-  <!-- Request Service Modal -->
-  <div id="serviceModal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="serviceTitle">
-    <div class="modal-content">
-      <button class="close" id="closeModal">×</button>
-      <h3 id="serviceTitle">Request Service</h3>
-      <form id="serviceForm" action="https://formspree.io/f/xovlzvzd" method="POST">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="phone">Phone</label>
-        <input type="tel" name="phone" id="phone">
-
-        <label for="message">Issue</label>
-        <textarea name="message" id="message" required></textarea>
-
-        <button type="submit" class="btn primary">Submit Request</button>
+    <section id="contact" class="panel">
+      <h2 style="font:700 26px Inter;margin:0 0 10px">Get a Free Quote</h2>
+      <p>Email <a href="mailto:hello@inmplumbing.com">hello@inmplumbing.com</a> or call <a href="tel:+15551234567">(555) 123-4567</a>. Same-day appointments available.</p>
+      <form onsubmit="event.preventDefault();alert('Thanks! We will contact you shortly.')" style="display:grid;gap:12px;max-width:560px">
+        <input required placeholder="Your name" style="padding:12px 14px;border:1px solid #d7e3ea;border-radius:12px">
+        <input required placeholder="Phone or email" style="padding:12px 14px;border:1px solid #d7e3ea;border-radius:12px">
+        <textarea rows="4" placeholder="How can we help?" style="padding:12px 14px;border:1px solid #d7e3ea;border-radius:12px"></textarea>
+        <button class="cta" style="border:0;cursor:pointer">Request Quote</button>
       </form>
-      <p class="note">This is a demo — submissions go to your Formspree inbox.</p>
-    </div>
-  </div>
+    </section>
 
-  <script src="assets/js/app.js"></script>
+    <div class="cta-bar"><a href="#contact">Need help now? Book service →</a></div>
+    <footer class="wrap">© <span id="y"></span>Plumbing. All rights reserved.</footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
