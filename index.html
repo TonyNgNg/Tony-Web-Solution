@@ -13,6 +13,36 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
+   <!-- Language Switcher -->
+  <button class="lang-btn" onclick="setLanguage('en')">English</button>
+  <button class="lang-btn" onclick="setLanguage('es')">Español</button>
+
+  <h1 id="title">Welcome to Tony Web Solutions</h1>
+  <p id="desc">We create modern and responsive websites for your business.</p>
+  <footer id="footer">© 2025 Tony Web Solutions. All rights reserved.</footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Welcome to Tony Web Solutions",
+        desc: "We create modern and responsive websites for your business.",
+        footer: "© 2025 Tony Web Solutions. All rights reserved."
+      },
+      es: {
+        title: "Bienvenido a Tony Web Solutions",
+        desc: "Creamos sitios web modernos y responsivos para tu negocio.",
+        footer: "© 2025 Tony Web Solutions. Todos los derechos reservados."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById("title").innerText = translations[lang].title;
+      document.getElementById("desc").innerText = translations[lang].desc;
+      document.getElementById("footer").innerText = translations[lang].footer;
+    }
+  </script>
+</body>
+</html>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#home">
