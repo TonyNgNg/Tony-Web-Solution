@@ -13,36 +13,6 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-   <!-- Language Switcher -->
-  <button class="lang-btn" onclick="setLanguage('en')">English</button>
-  <button class="lang-btn" onclick="setLanguage('es')">Español</button>
-
-  <h1 id="title">Welcome to Tony Web Solutions</h1>
-  <p id="desc">We create modern and responsive websites for your business.</p>
-  <footer id="footer">© 2025 Tony Web Solutions. All rights reserved.</footer>
-
-  <script>
-    const translations = {
-      en: {
-        title: "Welcome to Tony Web Solutions",
-        desc: "We create modern and responsive websites for your business.",
-        footer: "© 2025 Tony Web Solutions. All rights reserved."
-      },
-      es: {
-        title: "Bienvenido a Tony Web Solutions",
-        desc: "Creamos sitios web modernos y responsivos para tu negocio.",
-        footer: "© 2025 Tony Web Solutions. Todos los derechos reservados."
-      }
-    };
-
-    function setLanguage(lang) {
-      document.getElementById("title").innerText = translations[lang].title;
-      document.getElementById("desc").innerText = translations[lang].desc;
-      document.getElementById("footer").innerText = translations[lang].footer;
-    }
-  </script>
-</body>
-</html>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#home">
@@ -249,5 +219,122 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  
+<!-- Language Switch Script with Auto-Detect -->
+<script>
+  const langBtn = document.getElementById("langBtn");
+  let currentLang = "en";
+
+  const translations = {
+    // Nav
+    "Services": "Servicios",
+    "Portfolio": "Portafolio",
+    "About": "Acerca de",
+    "Pricing": "Precios",
+    "Get a Quote": "Obtener Cotización",
+    "Contact": "Contacto",
+
+    // Hero
+    "Building Modern Websites for Businesses That Want to Grow": "Creando Sitios Web Modernos para Negocios que Quieren Crecer",
+    "At Tony Web Solutions, we create responsive, high-converting websites that help small businesses stand out online.":
+      "En Tony Web Solutions, creamos sitios web responsivos y efectivos que ayudan a los pequeños negocios a destacar en línea.",
+    "Get Your Website Today": "Consigue tu Sitio Web Hoy",
+    "See Our Work": "Ver Nuestro Trabajo",
+    "Responsive Design": "Diseño Responsivo",
+    "SEO-Friendly": "Optimizado para SEO",
+    "Fast & Secure": "Rápido y Seguro",
+
+    // Services
+    "What We Do": "Lo Que Hacemos",
+    "Everything you need to launch and grow online.": "Todo lo que necesitas para crecer en línea.",
+    "Responsive Web Design": "Diseño Web Responsivo",
+    "Beautiful, mobile-friendly websites for any device so customers get the best experience, every time.":
+      "Sitios web hermosos y adaptables para cualquier dispositivo, para que tus clientes siempre tengan la mejor experiencia.",
+    "E-Commerce Development": "Desarrollo de Comercio Electrónico",
+    "Secure, easy-to-manage online stores built for growth with clear product pages and checkout flows.":
+      "Tiendas en línea seguras y fáciles de gestionar, con páginas de productos claras y procesos de pago simples.",
+    "SEO Optimization": "Optimización SEO",
+    "On-page best practices to rank higher on Google and attract more visitors and customers.":
+      "Prácticas de SEO en la página para posicionarte más alto en Google y atraer más clientes.",
+    "Website Maintenance": "Mantenimiento Web",
+    "Updates, backups, and security monitoring so your site stays fast, secure, and reliable.":
+      "Actualizaciones, copias de seguridad y monitoreo de seguridad para que tu sitio sea rápido y seguro.",
+
+    // Portfolio
+    "Our Work": "Nuestro Trabajo",
+    "Recent projects and concept demos.": "Proyectos recientes y demostraciones.",
+    "Lead-gen website with quote form, trust badges, and service area pages.": "Sitio web de generación de clientes con formulario de cotización, sellos de confianza y páginas de servicios.",
+    "Personal brand website with booking integration and blog for content marketing.": "Sitio personal con integración de reservas y blog para marketing de contenido.",
+    "Small e-commerce build focused on conversions and simple product management.": "Tienda online enfocada en conversiones y gestión simple de productos.",
+    "Custom site with menu browsing and online orders. Responsive and optimized for local searches.": "Sitio web personalizado con navegación de menú y pedidos en línea. Optimizado para búsquedas locales.",
+
+    // About
+    "About Tony Web Solutions": "Acerca de Tony Web Solutions",
+    "We believe every business deserves a professional online presence without breaking the bank. Founded with a passion for technology and design, we build websites that work as hard as you do — fast, responsive, and SEO-friendly.":
+      "Creemos que cada negocio merece una presencia en línea profesional sin gastar demasiado. Con pasión por la tecnología y el diseño, construimos sitios web rápidos, responsivos y optimizados para SEO.",
+    "Affordable pricing": "Precios accesibles",
+    "Fast delivery": "Entrega rápida",
+    "Ongoing support": "Soporte continuo",
+    "SEO-friendly designs": "Diseños optimizados para SEO",
+
+    // Pricing
+    "Simple Pricing": "Precios Simples",
+    "Pick the plan that fits your budget and timeline.": "Elige el plan que se ajuste a tu presupuesto y tiempo.",
+    "Upfront Plan": "Plan de Pago Único",
+    "Design & setup included": "Diseño y configuración incluidos",
+    "Lower monthly hosting cost": "Costo mensual de hosting más bajo",
+    "Own your site outright": "Eres dueño total de tu sitio",
+    "Get Started": "Comenzar",
+    "No Upfront Subscription": "Suscripción Sin Pago Inicial",
+    "No big starting payment": "Sin gran pago inicial",
+    "Includes design, hosting, updates, support": "Incluye diseño, hosting, actualizaciones y soporte",
+    "12-month commitment": "Compromiso de 12 meses",
+    "Start for $0 Today": "Empieza por $0 Hoy",
+    "Popular": "Popular",
+
+    // Testimonial
+    "“Tony Web Solutions delivered exactly what I needed — a clean, fast website that my customers love.”":
+      "“Tony Web Solutions entregó exactamente lo que necesitaba: un sitio limpio y rápido que mis clientes adoran.”",
+    "— Happy Client": "— Cliente Satisfecho",
+
+    // Contact
+    "Ready to Start Your Project?": "¿Listo para Iniciar Tu Proyecto?",
+    "Let’s turn your vision into a website that delivers results. Fill out the form and we’ll get back to you within 24 hours.":
+      "Convirtamos tu visión en un sitio web que da resultados. Completa el formulario y te responderemos en 24 horas.",
+    "Your Name": "Tu Nombre",
+    "Your Email": "Tu Correo",
+    "Your Message": "Tu Mensaje",
+    "Send Message": "Enviar Mensaje",
+
+    // Footer
+    "All rights reserved.": "Todos los derechos reservados."
+  };
+
+  function translatePage() {
+    const elements = document.querySelectorAll("h1, h2, h3, p, a, li, button, cite, blockquote, label, strong");
+    if (currentLang === "en") {
+      elements.forEach(el => {
+        const text = el.innerText.trim();
+        if (translations[text]) {
+          el.innerText = translations[text];
+        }
+      });
+      langBtn.innerText = "English";
+      currentLang = "es";
+    } else {
+      window.location.reload(); // reset to English
+    }
+  }
+
+  // Auto-detect browser language
+  window.addEventListener("DOMContentLoaded", () => {
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith("es")) {
+      translatePage(); // auto-translate to Spanish if browser is in Spanish
+    }
+  });
+
+  langBtn.addEventListener("click", translatePage);
+</script>
 </body>
 </html>
