@@ -1,151 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Tony Web Solutions | Digital Agency</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tony Web Solutions — Modern Websites for Small Business</title>
+  <meta name="description" content="Tony Web Solutions builds modern, responsive websites for local businesses. Web design, e-commerce, SEO, hosting and maintenance." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#071026; --bg-2:#061827;
+      --card:#0b1220; --accent:#06b6d4; --accent2:#8b5cf6; --muted:#94a3b8; --maxw:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      color:#e6f0f2;-webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
+
+    /* Header */
+    header.site-header{position:sticky;top:0;z-index:1200;background:transparent;padding:12px 0}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#022}
+    .brand-title{font-weight:800;color:#e6f0f2}
+    nav.header-nav{display:flex;gap:14px;align-items:center}
+    nav.header-nav a{color:#cfeffb;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    .btn-cta{background:linear-gradient(90deg,var(--accent),var(--accent2));padding:10px 14px;border-radius:12px;color:#022;font-weight:800;box-shadow:0 14px 40px rgba(6,182,212,0.12)}
+
+    /* small icon buttons */
+    .icon-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cfeffb;padding:8px 10px;border-radius:999px;cursor:pointer;font-weight:700}
+
+    .menu-btn{display:none;background:transparent;border:0;cursor:pointer;padding:8px}
+    .menu-btn span{display:block;width:22px;height:2px;background:#cfeffb;margin:4px 0;border-radius:2px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:36px 0}
+    .hero h1{font-size:40px;line-height:1.02;color:#fff;margin-bottom:10px}
+    .lead{color:var(--muted);max-width:58ch}
+    .hero-ctas{display:flex;gap:12px;margin-top:18px}
+    .kickers{display:flex;gap:10px;margin-top:14px}
+    .kicker{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:700;font-size:13px}
+
+    .preview{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;box-shadow:0 40px 120px rgba(2,8,10,.6);display:grid;place-items:center;min-height:320px}
+
+    /* Services & Portfolio */
+    .section-title{font-size:18px;color:#cfeffb;margin-bottom:10px}
+    .section-sub{color:var(--muted);margin-bottom:14px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;box-shadow:0 12px 28px rgba(2,8,10,.5);text-align:center}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+    .port-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px}
+
+    /* About / Pricing / Contact */
+    .columns{display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:start}
+    .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+    .price{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;text-align:center}
+    .price .amount{font-size:28px;font-weight:800;color:var(--accent)}
+    .testimonial{background:rgba(255,255,255,0.02);padding:22px;border-radius:12px;text-align:center;margin:18px 0}
+    .contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#e6f0f2}
+    .contact-form label{display:block;margin-bottom:8px;color:var(--muted)}
+
+    /* Footer */
+    footer.site-footer{margin-top:36px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr 1fr}
+      .portfolio-grid{grid-template-columns:1fr 1fr}
+      .columns{grid-template-columns:1fr}
+      .pricing-grid{grid-template-columns:1fr}
+      .preview{min-height:220px}
+    }
+    @media (max-width:700px){
+      nav.header-nav{display:none}
+      .menu-btn{display:block}
+      .hero h1{font-size:28px}
+      .container{padding:16px}
+    }
+
+    /* utilities */
+    .small{font-size:13px;color:var(--muted)}
+    .center{display:grid;place-items:center}
+  </style>
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <div class="logo">Tony<span>Web Solutions</span></div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <div class="logo">TWS</div>
+        <div class="brand-title">Tony Web Solutions</div>
+      </a>
+
+      <nav class="header-nav" id="nav">
+        <a id="nav-services" href="#services">Services</a>
+        <a id="nav-portfolio" href="#portfolio">Portfolio</a>
+        <a id="nav-about" href="#about">About</a>
+        <a id="nav-pricing" href="#pricing">Pricing</a>
+        <a id="nav-contact" class="btn-cta" href="#contact">Get a Quote</a>
       </nav>
-      <a href="#contact" class="cta-nav">Let's Talk</a>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button id="langBtn" class="icon-btn" aria-label="Switch language">ES</button>
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="container hero-content">
-        <h1>
-          Make <span class="gradient-text">great</span><br>
-          first impressions.<br>
-          <span class="highlight">Modern websites</span> that convert.
-        </h1>
-        <p>Agency-grade websites for startups, brands & businesses who want to stand out and grow fast.</p>
-        <a href="#contact" class="cta-main">Get a Free Quote</a>
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <div class="kickers"><div class="kicker">Responsive • SEO • Fast</div><div class="kicker">Small business focus</div></div>
+        <h1 id="hero-title">Modern websites that turn visitors into customers</h1>
+        <p id="hero-sub" class="lead">I design fast, mobile-first websites that make it easy for locals to find and book your services — perfect for restaurants, salons, plumbers and boutiques.</p>
+        <div class="hero-ctas">
+          <a id="cta-quote" class="btn-cta" href="#contact">Get a Quote</a>
+          <a id="cta-work" class="icon-btn" href="#portfolio" style="background:transparent;border:1px solid rgba(255,255,255,0.06)">See Work</a>
+        </div>
+        <div class="kickers" style="margin-top:14px">
+          <div class="kicker">Responsive Design</div><div class="kicker">SEO Optimized</div><div class="kicker">Managed Hosting</div>
+        </div>
       </div>
-      <div class="trusted">
-        <span>Trusted by:</span>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" />
-      </div>
-    </section>
-    
-    <section id="services" class="services">
-      <div class="container">
-        <h2>What we do best</h2>
-        <div class="service-row">
-          <div class="service-card">
-            <div class="icon">🌐</div>
-            <h3>Brand Websites</h3>
-            <p>Pixel-perfect, fast, custom-designed for your brand and goals.</p>
-          </div>
-          <div class="service-card">
-            <div class="icon">📱</div>
-            <h3>Web Apps</h3>
-            <p>Powerful, interactive applications that scale with your business.</p>
-          </div>
-          <div class="service-card">
-            <div class="icon">🎯</div>
-            <h3>Conversion Optimization</h3>
-            <p>We turn visitors into customers with UX & CRO best practices.</p>
-          </div>
-          <div class="service-card">
-            <div class="icon">🚀</div>
-            <h3>SEO & Growth</h3>
-            <p>Get found and grow with proven SEO and digital marketing.</p>
-          </div>
+
+      <div class="preview center" aria-hidden="true">
+        <div style="text-align:center">
+          <div style="font-weight:800;font-size:18px">Preview</div>
+          <div class="small" style="margin-top:8px">Your site — fast & beautiful on any device</div>
         </div>
       </div>
     </section>
-    
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2>Recent Projects</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Client 1">
-            <div class="overlay">
-              <h4>Fintech Startup</h4>
-              <span>Landing Page & Dashboard</span>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80" alt="Client 2">
-            <div class="overlay">
-              <h4>Restaurant Chain</h4>
-              <span>Multi-location Website</span>
-            </div>
-          </div>
-          <div class="portfolio-card">
-            <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=600&q=80" alt="Client 3">
-            <div class="overlay">
-              <h4>E-commerce Brand</h4>
-              <span>Shopify Custom Theme</span>
-            </div>
-          </div>
-        </div>
-        <div class="center">
-          <a href="#contact" class="cta-secondary">See More Work</a>
-        </div>
+
+    <!-- SERVICES -->
+    <section id="services" style="margin-top:20px">
+      <div class="section-title">Services</div>
+      <div class="section-sub small">Everything you need to launch and grow online.</div>
+      <div class="features">
+        <div class="feature"><div class="small badge">Design</div><h3>Custom Websites</h3><p class="small">Conversion-first layouts tailored to your brand.</p></div>
+        <div class="feature"><div class="small badge">Sell</div><h3>E-commerce</h3><p class="small">Simple stores that convert and are easy to manage.</p></div>
+        <div class="feature"><div class="small badge">Grow</div><h3>Local SEO</h3><p class="small">Rank higher in maps and local searches.</p></div>
       </div>
     </section>
-    
-    <section id="about" class="about">
-      <div class="container about-flex">
-        <div>
-          <h2>Why choose us?</h2>
-          <ul>
-            <li>🚀 <b>Fast Turnaround</b> – Go live in weeks, not months.</li>
-            <li>🧠 <b>Strategy + Design</b> – Websites that look great and achieve business goals.</li>
-            <li>🤝 <b>100% Satisfaction</b> – We work until you love it.</li>
-            <li>⚡ <b>Ongoing Support</b> – We're here after launch, too.</li>
-          </ul>
-        </div>
-        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Our Team" class="about-img">
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" style="margin-top:28px">
+      <div class="section-title">Recent Work</div>
+      <div class="section-sub small">Projects & concept demos.</div>
+      <div class="portfolio-grid">
+        <div class="port-card"><h4>Plumber — Lead Gen</h4><p class="small">Form, click-to-call, service pages.</p></div>
+        <div class="port-card"><h4>Bakery — Online Orders</h4><p class="small">Menu browsing & local SEO.</p></div>
+        <div class="port-card"><h4>Salon — Bookings</h4><p class="small">Services, booking links, gallery.</p></div>
       </div>
+    </section>
+
+    <!-- ABOUT / PRICING / CONTACT -->
+    <section id="about" class="columns" style="margin-top:28px">
+      <div>
+        <h3>About</h3>
+        <p class="small" id="about-sub">I build practical, beautiful websites for local businesses — fast delivery, affordable pricing, and reliable hosting.</p>
+        <ul class="small">
+          <li>Transparent pricing</li>
+          <li>Fast turnaround</li>
+          <li>Ongoing support</li>
+        </ul>
+      </div>
+      <div style="background:rgba(255,255,255,0.02);padding:18px;border-radius:12px">Want a demo for your business? I’ll build a preview site you can review.</div>
+    </section>
+
+    <section id="pricing" style="margin-top:22px">
+      <div class="section-title">Pricing</div>
+      <div class="section-sub small">Pick the plan that fits your budget and timeline.</div>
+      <div class="pricing-grid">
+        <div class="price"><h4>Upfront</h4><div class="amount">$1,200</div><p class="small">Custom site, one-time fee.</p><a class="small badge" href="#contact">Get Started</a></div>
+        <div class="price"><h4>Subscription</h4><div class="amount">$75 <span class="small">/mo</span></div><p class="small">Hosting, updates & support included.</p><a class="small badge" href="#contact">Start for Free</a></div>
+      </div>
+    </section>
+
+    <section class="testimonial" style="margin-top:18px">
+      <blockquote class="small">“Clean, fast, and exactly what our customers needed.” <cite class="small">— Local Business</cite></blockquote>
+    </section>
+
+    <section id="contact" class="columns" style="margin-top:18px">
+      <div>
+        <h3>Contact</h3>
+        <p class="small">Quick quote or custom demo — message me and I'll send a preview for your business.</p>
+        <ul class="small"><li>Instagram: @tonywebsolution</li><li>Email: hello@tonywebsolutions.com</li></ul>
+      </div>
+      <form class="contact-form" style="display:grid;gap:10px" action="https://formspree.io/f/xovlzvzd" method="POST">
+        <label class="small">Name<input name="name" required></label>
+        <label class="small">Email<input name="_replyto" type="email" required></label>
+        <label class="small">Message<textarea name="message" rows="4" required></textarea></label>
+        <button class="btn-cta" type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
-  <div class="contact-bar" id="contact">
-    <div class="container contact-bar-inner">
-      <div>
-        <span>Ready to grow?</span>
-        <strong>Let's build your next website.</strong>
-      </div>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <button type="submit">Start Project</button>
-      </form>
-      <div id="formMessage"></div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="footer-row">
-        <div class="footer-logo">Tony<span>Web</span></div>
-        <nav>
-          <a href="#">LinkedIn</a>
-          <a href="https://www.facebook.com/profile.php?id=61567037637894">Facebook</a>
-          <a href="https://www.instagram.com/tonywebsolution/">Instagram</a>
-        </nav>
-      </div>
-      <div class="copyright">&copy; 2025 Tony Web Solutions. All rights reserved.</div>
-    </div>
+  <footer class="site-footer container">
+    <div class="small">Tony Web Solutions</div>
+    <div class="small">© <span id="year"></span> Tony Web Solutions. All rights reserved.</div>
   </footer>
-  <script src="main.js"></script>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=>{
+        const visible = window.getComputedStyle(nav).display !== 'none';
+        if(!visible){
+          nav.style.display='flex';
+          nav.style.flexDirection='column';
+          nav.style.position='absolute';
+          nav.style.top='68px';
+          nav.style.right='18px';
+          nav.style.background='rgba(7,18,34,0.98)';
+          nav.style.padding='12px';
+          nav.style.borderRadius='8px';
+        } else {
+          nav.style.display='';
+          nav.style.flexDirection='';
+          nav.style.position='';
+          nav.style.top='';
+          nav.style.right='';
+          nav.style.background='';
+          nav.style.padding='';
+          nav.style.borderRadius='';
+        }
+      });
+    }
+
+    // Language switch + auto-detect + simple persist
+    const langBtn = document.getElementById('langBtn');
+    let currentLang = 'en';
+    const dict = {
+      "Services":"Servicios","Portfolio":"Portafolio","About":"Acerca de","Pricing":"Precios","Get a Quote":"Obtener Cotización","Get a Quote":"Obtener Cotización",
+      "Modern websites that turn visitors into customers":"Sitios modernos que convierten visitantes en clientes",
+      "I design fast, mobile-first websites that make it easy for locals to find and book your services — perfect for restaurants, salons, plumbers and boutiques.":"Diseño sitios rápidos y móviles que facilitan que los locales te encuentren y reserven tus servicios — ideal para restaurantes, salones, plomeros y tiendas.",
+      "Custom Websites":"Sitios Personalizados","E-commerce":"Comercio Electrónico","Local SEO":"SEO Local",
+      "Recent Work":"Trabajo Reciente","About":"Acerca de","Ready to launch? Let's make a demo.":"¿Listo para lanzar? Hagamos un demo.",
+      "Name":"Nombre","Email":"Correo","Message":"Mensaje","Send Message":"Enviar Mensaje"
+    };
+
+    function translateTo(lang){
+      const nodes = document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,a,li,button,label,span');
+      nodes.forEach(n=>{
+        const t = n.innerText.trim();
+        if(!t) return;
+        if(lang==='es' && dict[t]) n.innerText = dict[t];
+        if(lang==='en'){
+          const eng = Object.keys(dict).find(k=>dict[k]===t);
+          if(eng) n.innerText = eng;
+        }
+      });
+    }
+
+    function detectAndApply(){
+      const saved = localStorage.getItem('tws_lang');
+      const user = (navigator.language||'en').toLowerCase();
+      if(saved){
+        if(saved==='es'){ translateTo('es'); langBtn.innerText='EN'; currentLang='es'; } else { langBtn.innerText='ES'; currentLang='en'; }
+      } else {
+        if(user.startsWith('es')){ translateTo('es'); langBtn.innerText='EN'; currentLang='es'; localStorage.setItem('tws_lang','es'); } else { langBtn.innerText='ES'; currentLang='en'; localStorage.setItem('tws_lang','en'); }
+      }
+    }
+
+    langBtn.addEventListener('click', ()=>{
+      if(currentLang==='en'){ translateTo('es'); langBtn.innerText='EN'; currentLang='es'; localStorage.setItem('tws_lang','es'); }
+      else { translateTo('en'); langBtn.innerText='ES'; currentLang='en'; localStorage.setItem('tws_lang','en'); }
+    });
+
+    // Year
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Run on load
+    document.addEventListener('DOMContentLoaded', ()=>{ detectAndApply(); });
+  </script>
 </body>
 </html>
+
