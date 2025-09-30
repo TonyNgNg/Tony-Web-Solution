@@ -7,7 +7,7 @@
 }
 
 .logo img {
-  height: 40px;   /* keeps logo smaller */
+  height: 20px;   /* keeps logo smaller */
   width: auto;    /* keeps proportions */
   object-fit: contain; /* avoids stretching */
 }
