@@ -7,8 +7,9 @@
 }
 
 .logo img {
-  height: 60px;  /* adjust size */
-  width: auto;
+  height: 40px;   /* keeps logo smaller */
+  width: auto;    /* keeps proportions */
+  object-fit: contain; /* avoids stretching */
 }
 
 :root {
