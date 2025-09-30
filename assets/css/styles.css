@@ -1,15 +1,14 @@
-.site-header {
+.logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: #0f172a; /* Dark navy background */
+  gap: 10px; /* space between logo and text */
 }
 
 .logo img {
-  height: 20px;   /* keeps logo smaller */
-  width: auto;    /* keeps proportions */
-  object-fit: contain; /* avoids stretching */
+  height: 40px;   /* control size */
+  width: auto;    /* keep aspect ratio */
+  max-width: 100%;
+  object-fit: contain;
 }
 
 :root {
