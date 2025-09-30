@@ -1,3 +1,16 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #0f172a; /* Dark navy background */
+}
+
+.logo img {
+  height: 60px;  /* adjust size */
+  width: auto;
+}
+
 :root {
   --main-bg: #0f172a;
   --accent: #6366f1;
