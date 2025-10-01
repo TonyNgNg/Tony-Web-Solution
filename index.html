@@ -27,6 +27,9 @@
         <a href="#contact" class="btn btn-sm">Get a Quote</a>
       </nav>
       <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+        <div class="toggle-controls">
+  <button id="lang-toggle">ES</button>
+  <button id="mode-toggle">🌙</button>
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -182,12 +185,12 @@
         <h2 class="section-title">Ready to Start Your Project?</h2>
         <p>Let’s turn your vision into a website that delivers results. Fill out the form and we’ll get back to you within 24 hours.</p>
         <ul class="contact-list">
-          <li><strong>Email:</strong> hello@tonywebsolutions.com</li>
+          <li><strong>Email:</strong> tonywebsolutions@gmail.com</li>
           <li><strong>Instagram:</strong> @tonywebsolutions</li>
           <li><strong>Location:</strong> Remote — Worldwide</li>
         </ul>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+      <form class="contact-form" action="https://formspree.io/f/xovlzvzd" method="POST">
         <label>
           Your Name
           <input type="text" name="name" required>
@@ -224,5 +227,48 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+  const langToggle = document.getElementById("lang-toggle");
+  const modeToggle = document.getElementById("mode-toggle");
+
+  // Default state
+  let currentLang = "en";
+  let darkMode = false;
+
+  // Text dictionary
+  const translations = {
+    en: {
+      heroTitle: "Websites That Drive Results",
+      heroDesc: "We design modern, mobile-friendly websites that help your business grow online.",
+      contact: "Contact Us",
+      send: "Send Message"
+    },
+    es: {
+      heroTitle: "Sitios web que generan resultados",
+      heroDesc: "Diseñamos sitios web modernos y adaptables que ayudan a crecer tu negocio en línea.",
+      contact: "Contáctanos",
+      send: "Enviar Mensaje"
+    }
+  };
+
+  // Language switch
+  langToggle.addEventListener("click", () => {
+    currentLang = currentLang === "en" ? "es" : "en";
+    langToggle.textContent = currentLang === "en" ? "ES" : "EN";
+
+    // Replace text dynamically
+    document.querySelector(".hero h1").textContent = translations[currentLang].heroTitle;
+    document.querySelector(".hero p").textContent = translations[currentLang].heroDesc;
+    document.querySelector("#contact h2").textContent = translations[currentLang].contact;
+    document.querySelector("#contact button").textContent = translations[currentLang].send;
+  });
+
+  // Dark/Light mode switch
+  modeToggle.addEventListener("click", () => {
+    darkMode = !darkMode;
+    document.body.classList.toggle("dark", darkMode);
+    modeToggle.textContent = darkMode ? "☀️" : "🌙";
+  });
+</script>
 </body>
 </html>
