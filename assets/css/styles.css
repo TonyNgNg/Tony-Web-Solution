@@ -263,31 +263,44 @@ button:hover,
   font-size: 0.95rem;
   line-height: 1.4;
 }
-/* === Hero Image Fix === */
-.hero-img {
+/* --- Responsive Hero Image Fix --- */
+.hero-art {
   width: 100%;
   max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0 auto;
+  text-align: center;
 }
 
-/* Optional: Add spacing on small screens */
+.hero-art img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+/* Optional: Make layout more mobile-friendly */
 @media (max-width: 720px) {
   .hero-text h1 {
     font-size: 28px;
+    text-align: center;
   }
 
   .hero-text p {
     font-size: 16px;
+    text-align: center;
   }
 
-  .hero {
-    padding: 40px 0;
+  .hero-cta {
+    justify-content: center;
   }
 
-  .hero-img {
+  .trust-bullets {
+    justify-content: center;
+  }
+
+  .hero-art img {
     max-width: 90%;
   }
 }
+
