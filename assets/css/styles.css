@@ -217,21 +217,49 @@ button:hover,
   transform: translateY(-6px) scale(1.04);
   box-shadow: 0 12px 28px rgba(99, 102, 241, 0.2);
 }
-/* ✅ Responsive Fix for Portfolio Cards */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+/* === Portfolio Section === */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-  .work {
-    width: 100%;
-    text-align: center;
-  }
+.work {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-  .work img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+.work:hover {
+  transform: translateY(-6px); /* lift effect */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.work img {
+  width: 100%;
+  height: 200px; /* keep images same height */
+  object-fit: cover; /* crop proportionally */
+  transition: transform 0.4s ease;
+}
+
+.work:hover img {
+  transform: scale(1.05); /* zoom effect */
+}
+
+.work figcaption {
+  padding: 15px;
+}
+
+.work h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.work p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
