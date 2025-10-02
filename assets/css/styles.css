@@ -164,3 +164,42 @@ button, .btn-primary, .btn, .btn-hover {
   background: linear-gradient(90deg, var(--accent2), var(--accent));
   transform: scale(1.05);
 }
+/* === Dark Mode Text Fix === */
+[data-theme="dark"] body,
+[data-theme="dark"] p,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] a,
+[data-theme="dark"] li {
+  color: var(--light) !important;
+}
+/* === Button Hover Effects === */
+button,
+.cta-main,
+.cta-nav,
+.cta-secondary {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+button:hover,
+.cta-main:hover,
+.cta-nav:hover,
+.cta-secondary:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+/* === Card Hover Effects === */
+.service-card,
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.project-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.2);
+}
