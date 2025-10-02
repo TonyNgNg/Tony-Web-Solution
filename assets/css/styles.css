@@ -121,3 +121,46 @@ body.dark {
   background: #0f172a;
   color: #f1f5f9;
 }
+
+/* Button base style */
+button, .btn-primary, .btn, .btn-hover {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover style 1: lift + shadow */
+.btn-hover-1 {
+  background: var(--accent2);
+  color: var(--main-bg);
+}
+
+.btn-hover-1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(20,184,166,0.3);
+}
+
+/* Hover style 2: border glow + background change */
+.btn-hover-2 {
+  background: transparent;
+  color: var(--accent2);
+  border: 2px solid var(--accent2);
+}
+
+.btn-hover-2:hover {
+  background: var(--accent2);
+  color: var(--main-bg);
+}
+
+/* Hover style 3: gradient background & scale */
+.btn-hover-3 {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: var(--main-bg);
+}
+
+.btn-hover-3:hover {
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transform: scale(1.05);
+}
