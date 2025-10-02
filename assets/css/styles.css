@@ -177,6 +177,20 @@ button, .btn-primary, .btn, .btn-hover {
 [data-theme="dark"] li {
   color: var(--light) !important;
 }
+/* ✅ Dark Mode Fix for Portfolio Section */
+body.dark-mode .section-title,
+body.dark-mode .section-subtitle,
+body.dark-mode .work h4,
+body.dark-mode .work p {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .work {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
 /* === Button Hover Effects === */
 button,
 .cta-main,
@@ -203,3 +217,21 @@ button:hover,
   transform: translateY(-6px) scale(1.04);
   box-shadow: 0 12px 28px rgba(99, 102, 241, 0.2);
 }
+/* ✅ Responsive Fix for Portfolio Cards */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .work {
+    width: 100%;
+    text-align: center;
+  }
+
+  .work img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
