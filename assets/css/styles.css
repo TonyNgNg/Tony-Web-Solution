@@ -263,3 +263,31 @@ button:hover,
   font-size: 0.95rem;
   line-height: 1.4;
 }
+/* === Hero Image Fix === */
+.hero-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Optional: Add spacing on small screens */
+@media (max-width: 720px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-img {
+    max-width: 90%;
+  }
+}
