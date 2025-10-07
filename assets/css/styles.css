@@ -304,3 +304,65 @@ button:hover,
   }
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: var(--footer-bg, #0b0c10);
+  color: var(--text-color, #fff);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+}
+
+.footer-name {
+  font-weight: 600;
+  color: var(--text-color, #fff);
+}
+
+/* 🌙 Social icons base style */
+.footer-socials a {
+  color: var(--icon-color, #fff);
+  font-size: 1.3rem;
+  margin-left: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #00bfff; /* hover color */
+  transform: scale(1.2);
+}
+
+/* 🌞 Light mode support */
+body.light-mode .footer-socials a {
+  color: #111; /* darker icons for light mode */
+}
+
+body.light-mode .footer-socials a:hover {
+  color: #0077ff;
+}
+
+/* 🌙 Dark mode support */
+body.dark-mode .footer-socials a {
+  color: #fff; /* white icons for dark mode */
+}
+
+body.dark-mode .footer-socials a:hover {
+  color: #00bfff;
+}
