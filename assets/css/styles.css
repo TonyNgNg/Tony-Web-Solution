@@ -279,6 +279,11 @@ button:hover,
   border-radius: 12px;
 }
 
+#typed-text {
+  color: #3b82f6; /* adjust to your theme color */
+  font-weight: 700;
+}
+
 /* Optional: Make layout more mobile-friendly */
 @media (max-width: 720px) {
   .hero-text h1 {
