@@ -263,6 +263,99 @@ button:hover,
   font-size: 0.95rem;
   line-height: 1.4;
 }
+/* ---- Slider: horizontal scrolling + arrows ---- */
+.slider-container {
+  position: relative;
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+}
+
+/* The scrolling track */
+.card-slider {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 6px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* hide native scrollbar nicely */
+.card-slider::-webkit-scrollbar { display: none; }
+.card-slider { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Each card uses your .work style with small tweaks for slider */
+.card-slider .work {
+  min-width: 260px;          /* width per visible card */
+  max-width: 320px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid #e9eef6;
+  box-shadow: 0 10px 26px -20px rgba(10,37,64,.25);
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+}
+
+/* slightly bigger lift on hover when visible in slider */
+.card-slider .work:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(10,37,64,0.18);
+}
+
+.card-slider .work img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* figcaption consistency */
+.card-slider .work figcaption { padding: 14px; }
+.card-slider .work h4 { margin: 0 0 6px; font-size: 1.05rem; }
+.card-slider .work p { margin:0; color:var(--muted); font-size:0.95rem; }
+
+/* Arrow buttons */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(10,37,64,0.85);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  cursor: pointer;
+  z-index: 30;
+  transition: background .18s, transform .12s;
+  box-shadow: 0 8px 20px rgba(10,37,64,0.16);
+}
+
+.slider-arrow:hover { transform: translateY(-50%) scale(1.04); background: var(--brand-2); }
+
+.slider-arrow.left { left: 8px; }
+.slider-arrow.right { right: 8px; }
+
+/* Hide arrows on very small screens (touch scroll) */
+@media (max-width: 520px) {
+  .slider-arrow { display: none; }
+  .card-slider .work { min-width: 80%; } /* show one card mostly on small screens */
+}
+
+/* Dark-mode tweaks if you use body.dark or body.dark-mode */
+body.dark .slider-arrow { background: rgba(255,255,255,0.08); color: #fff; }
+body.dark .card-slider .work { background: #0f172a; border-color: rgba(255,255,255,0.04); box-shadow: 0 6px 22px rgba(2,6,23,0.6); }
+
 /* --- Responsive Hero Image Fix --- */
 .hero-art {
   width: 100%;
