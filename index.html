@@ -143,6 +143,55 @@
     </div>
   </div>
 </section>
+  
+<script>
+(function() {
+  const slider = document.querySelector('.card-slider');
+  if(!slider) return;
+
+  // scroll amount per step (adjust to taste)
+  const STEP = 300;
+
+  window.slideLeft = function() {
+    slider.scrollBy({ left: -STEP, behavior: 'smooth' });
+  };
+  window.slideRight = function() {
+    slider.scrollBy({ left: STEP, behavior: 'smooth' });
+  };
+
+  // Auto-slide setup
+  let autoSlideInterval = null;
+  const AUTOPLAY_MS = 4000;
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(() => {
+      // if at end — return to start (loop)
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 2) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: STEP, behavior: 'smooth' });
+      }
+    }, AUTOPLAY_MS);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
+  }
+
+  // Pause auto-play while user interacts
+  slider.addEventListener('mouseenter', stopAutoSlide);
+  slider.addEventListener('mouseleave', startAutoSlide);
+  slider.addEventListener('touchstart', stopAutoSlide, {passive:true});
+  slider.addEventListener('touchend', startAutoSlide);
+
+  // start initially
+  startAutoSlide();
+})();
+</script>
 
   <section id="about" class="section">
     <div class="container about-grid">
