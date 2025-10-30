@@ -1,48 +1,289 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Local Plumbing Inc— Fast, Reliable Local Plumbers</title>
-  <meta name="description" content="Same-day plumbing repairs, leak detection, water heater installs. Licensed & insured." />
+  <title>Local Plumbing Inc — Fast, Reliable Local Plumbers</title>
+  <meta name="description" content="Same-day plumbing repairs, leak detection, and water heater installs. Licensed & insured." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --brand:#0b6c8e;--brand-700:#084e66;--accent:#ffd166;--ink:#10212b;--muted:#5e7380;
-      --bg:#f7fbfd;--card:#ffffff;--radius:16px;--shadow:0 10px 30px rgba(16,33,43,.08)
+    :root {
+      --brand: #0b6c8e;
+      --brand-700: #084e66;
+      --accent: #ffd166;
+      --ink: #10212b;
+      --muted: #5e7380;
+      --bg: #f7fbfd;
+      --card: #ffffff;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(16,33,43,.08);
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Nunito,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-    a{color:var(--brand);text-decoration:none}
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
-    .logo{display:flex;gap:10px;align-items:center;font:700 18px Inter,sans-serif}
-    .logo-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-700));display:grid;place-items:center;color:#fff}
-    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-    .cta{background:var(--accent);color:#1a1a1a;padding:10px 16px;border-radius:12px;font-weight:700}
-    .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;margin:28px 0 8px}
-    .panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:#e8f4f8;color:var(--brand-700);padding:6px 10px;border-radius:999px;font-weight:600}
-    h1{font:700 40px/1.1 Inter, sans-serif;margin:14px 0}
-    .kickers{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;color:var(--muted)}
-    .kickers span{display:flex;gap:8px;align-items:center;background:#fff;border:1px solid #e7edf1;border-radius:999px;padding:6px 10px}
-    .hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#dfeff6;min-height:320px;display:grid;place-items:center}
-    .grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr);margin:26px 0}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
-    .card h3{font:700 18px Inter;margin:8px 0}
-    .cta-bar{position:sticky;bottom:12px;display:flex;justify-content:center}
-    .cta-bar a{background:linear-gradient(135deg,var(--brand),var(--brand-700));color:#fff;padding:14px 20px;border-radius:999px;font-weight:700;box-shadow:0 10px 24px rgba(11,108,142,.25)}
-    footer{color:var(--muted);padding:30px 0}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Nunito, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font: 700 18px Inter, sans-serif;
+    }
+
+    .logo-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-700));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .cta {
+      background: var(--accent);
+      color: #1a1a1a;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    /* Mobile Menu Button */
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-btn span {
+      width: 24px;
+      height: 2px;
+      background: var(--brand);
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 28px;
+      margin: 28px 0 8px;
+      align-items: center;
+    }
+
+    .panel {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      background: #e8f4f8;
+      color: var(--brand-700);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font: 700 36px/1.2 Inter, sans-serif;
+      margin: 14px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0 0 12px;
+    }
+
+    .kickers {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      color: var(--muted);
+    }
+
+    .kickers span {
+      background: #fff;
+      border: 1px solid #e7edf1;
+      border-radius: 999px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+    }
+
+    .hero-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #dfeff6;
+      min-height: 300px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Grid sections */
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin: 26px 0;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .card h3 {
+      font: 700 18px Inter;
+      margin: 8px 0;
+    }
+
+    /* CTA bar */
+    .cta-bar {
+      position: sticky;
+      bottom: 12px;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .cta-bar a {
+      background: linear-gradient(135deg, var(--brand), var(--brand-700));
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(11,108,142,.25);
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      color: var(--muted);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    /* 🔹 Mobile Optimization */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 12px;
+        padding: 12px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        box-shadow: var(--shadow);
+        z-index: 999;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-img {
+        min-height: 220px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo"><div class="logo-badge"></div>Plumbing</div>
+      <div class="logo">
+        <div class="logo-badge">P</div>
+        Plumbing
+      </div>
+
+      <!-- ✅ Mobile Menu Button -->
+      <button class="menu-btn" id="menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav>
-        <ul>
+        <ul id="menu">
           <li><a href="#services">Services</a></li>
           <li><a href="#areas">Service Areas</a></li>
           <li><a href="#reviews">Reviews</a></li>
@@ -57,16 +298,19 @@
         <h1>Fast, Reliable Plumbing for Homes & Businesses</h1>
         <p>From leaks and clogs to water heater installs—we’ve got you covered. Upfront pricing, friendly techs, and jobs done right the first time.</p>
         <div class="kickers">
-          <span>✅ 24/7 Emergency</span><span>✅ No-mess Guarantee</span><span>✅ Financing Available</span>
+          <span>✅ 24/7 Emergency</span>
+          <span>✅ No-mess Guarantee</span>
+          <span>✅ Financing Available</span>
         </div>
         <p style="margin-top:18px">
           <a class="cta" href="#contact">Book Service</a>
-          &nbsp; or call <a href="tel:+15551234567"> (555) 123-4567</a>
+          &nbsp; or call <a href="tel:+15551234567">(555) 123-4567</a>
         </p>
       </div>
+
       <div class="hero-img">
-        <!-- Replace with your own photo -->
-        <img src="https://plus.unsplash.com/premium_photo-1661884973994-d7625e52631a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1200&auto=format&fit=crop" alt="Plumber working under sink" style="width:100%;height:100%;object-fit:cover">
+        <img src="https://plus.unsplash.com/premium_photo-1661884973994-d7625e52631a?q=80&w=2071&auto=format&fit=crop"
+          alt="Plumber working under sink">
       </div>
     </section>
 
@@ -89,7 +333,7 @@
 
     <section id="contact" class="panel">
       <h2 style="font:700 26px Inter;margin:0 0 10px">Get a Free Quote</h2>
-      <p>Email <a href="mailto:hello@inmplumbing.com">hello@plumbing.com</a> or call <a href="tel:+15551234567">(555) 123-4567</a>. Same-day appointments available.</p>
+      <p>Email <a href="mailto:hello@plumbing.com">hello@plumbing.com</a> or call <a href="tel:+15551234567">(555) 123-4567</a>. Same-day appointments available.</p>
       <form onsubmit="event.preventDefault();alert('Thanks! We will contact you shortly.')" style="display:grid;gap:12px;max-width:560px">
         <input required placeholder="Your name" style="padding:12px 14px;border:1px solid #d7e3ea;border-radius:12px">
         <input required placeholder="Phone or email" style="padding:12px 14px;border:1px solid #d7e3ea;border-radius:12px">
@@ -99,14 +343,22 @@
     </section>
 
     <div class="cta-bar"><a href="#contact">Need help now? Book service →</a></div>
-    <footer class="wrap">
-  © <span id="y"></span> 
-  <a href="https://tonywebsolutions.com" target="_blank" style="color:inherit; text-decoration:none; font-weight:600;">
-    Tony Web Solutions
-  </a>. All rights reserved.
-</footer>
 
+    <footer>
+      © <span id="y"></span>
+      <a href="https://tonywebsolutions.com" target="_blank" style="color:inherit;text-decoration:none;font-weight:600;">
+        Tony Web Solutions
+      </a>. All rights reserved.
+    </footer>
   </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // ✅ Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('show'));
+  </script>
 </body>
 </html>
