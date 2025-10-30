@@ -94,3 +94,8 @@ footer{background:var(--cream);padding:14px 12px;text-align:center;color:#ad7f4d
   .toy{height:180px;width:72%}
   h1{font-size:1.6rem}
 }
+/* Ensure mobile menu icon is always visible on all pages */
+.menu-btn {
+  z-index: 9999;
+  position: relative;
+}
