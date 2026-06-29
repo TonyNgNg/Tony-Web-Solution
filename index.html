@@ -67,13 +67,12 @@
 <style>
   .sticky-right-banner {
     position: fixed;
-    right: 15px;       /* Distance from the right edge of the screen */
-    top: 50%;          /* Moves it to the middle vertically */
-    transform: translateY(-50%); 
-    z-index: 99999;    /* Ensures it sits on top of other elements */
+    right: 15px;       /* Distance from the right browser edge */
+    top: 150px;        /* <-- ADJUST THIS NUMBER to match your other banner */
+    z-index: 99999;    
   }
 
-  /* CRITICAL: Hides the banner on mobile & smaller screens */
+  /* Keeps it hidden on mobile screens so it doesn't block text */
   @media screen and (max-width: 1200px) {
     .sticky-right-banner {
       display: none;
