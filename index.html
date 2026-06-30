@@ -73,15 +73,16 @@
     color: white;
     border: none;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
+    width: 24px; /* Reduced from 32px */
+    height: 24px; /* Reduced from 32px */
+    font-size: 14px; /* Smaller font for smaller button */
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
 
   /* Ensures the banner image fits nicely inside the pop-up */
@@ -97,40 +98,19 @@
   <div class="popup-content">
     <button class="popup-close" onclick="closePopup()">&#10005;</button>
     
-    <style>
-  /* Ensures the banner image fits nicely inside the pop-up */
-  .popup-content img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    max-height: 80vh;
-  }
-</style>
-
-<div class="popup-overlay" id="affiliatePopup">
-  <div class="popup-content">
-    <button class="popup-close" onclick="closePopup()">&#10005;</button>
-    
-    <!-- The blank framework that JavaScript will fill -->
+    <!-- The framework that JavaScript will fill -->
     <a id="popup-ad-link" href="" target="_blank">
-        <img id="popup-ad-image" src="" alt="Advertisement" border="0" style="max-width: 100%; height: auto;" />
+        <img id="popup-ad-image" src="" alt="Advertisement" border="0" />
     </a>
-    
   </div>
 </div>
 
 <script>
-  // Function to close the pop-up when the 'X' is clicked
   function closePopup() {
     document.getElementById('affiliatePopup').style.display = 'none';
   }
 </script>
 <!-- End Entry Pop-Up Ad -->
-  </div>
-</div>
-
-<!-- End Entry Pop-Up Ad -->
-  
 <!-- ========================================== -->
 <!-- AFFILIATE BANNER CODE START -->
 <!-- ========================================== -->
