@@ -376,6 +376,10 @@ body.dark .card-slider .work { background: #0f172a; border-color: rgba(255,255,2
   color: #3b82f6; /* adjust to your theme color */
   font-weight: 700;
 }
+/* The X button for ads */
+.your-close-button-class {
+    transform: scale(0.75); /* Scales the button down to 75% of its original size */
+}
 
 /* Optional: Make layout more mobile-friendly */
 @media (max-width: 720px) {
