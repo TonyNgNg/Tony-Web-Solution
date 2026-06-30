@@ -97,11 +97,23 @@
   <div class="popup-content">
     <button class="popup-close" onclick="closePopup()">&#10005;</button>
     
-    <!-- Your Affiliate Link -->
-    <a href="https://click.linksynergy.com/deeplink?id=1aSwjBzRdaI&mid=44583&murl=https%3a%2f%2fwww.newegg.com%2fShell-Shocker%2fEventSaleStore%2fID-10381%3fcm_sp%3dHomepage_shellshocker-_-SeeAll">
-    <img alt="icon" border="0" src="https://promotions.newegg.com/NEemail/Apr-0-2021/FlashSaleSecondary_LBdi8d_07/img/banner3.png">
-    </a>
-    <img alt="icon" width="1" height="1" src="https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.1&type=10">
+    <style>
+  /* Ensures the banner image fits nicely inside the pop-up */
+  .popup-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+  }
+</style>
+
+<div class="popup-overlay" id="affiliatePopup">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closePopup()">&#10005;</button>
+    
+    <!-- The blank framework that JavaScript will fill -->
+    <a id="popup-ad-link" href="" target="_blank">
+        <img id="popup-ad-image" src="" alt="Advertisement" border="0" style="max-width: 100%; height: auto;" />
     </a>
     
   </div>
@@ -113,6 +125,10 @@
     document.getElementById('affiliatePopup').style.display = 'none';
   }
 </script>
+<!-- End Entry Pop-Up Ad -->
+  </div>
+</div>
+
 <!-- End Entry Pop-Up Ad -->
   
 <!-- ========================================== -->
