@@ -1,7 +1,7 @@
 const menuBtn=document.getElementById('menuBtn');const nav=document.getElementById('nav');if(menuBtn){menuBtn.addEventListener('click',()=>{const open=nav.style.display==='flex';nav.style.display=open?'none':'flex';menuBtn.setAttribute('aria-expanded',String(!open));});}nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<721)nav.style.display='none';}));document.getElementById('year').textContent=new Date().getFullYear();
 // Random Popup Ad Script
 document.addEventListener("DOMContentLoaded", function() {
-    // Array of all 5 affiliate ads
+    // Array of all affiliate ads
     const ads = [
         { 
             // Ad 1
@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", function() {
             // Ad 5: Newegg Shell Shocker
             image: "https://promotions.newegg.com/NEemail/Apr-0-2021/FlashSaleSecondary_LBdi8d_07/img/banner3.png", 
             link: "https://click.linksynergy.com/deeplink?id=1aSwjBzRdaI&mid=44583&murl=https%3a%2f%2fwww.newegg.com%2fShell-Shocker%2fEventSaleStore%2fID-10381%3fcm_sp%3dHomepage_shellshocker-_-SeeAll",
+            alt: "Shell Shocker Event Sale"
+        },
+        { 
+            // Ad 5: Fanttik
+            image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600", 
+            link: "https://www.dpbolvw.net/click-101815247-17065965",
             alt: "Shell Shocker Event Sale"
         }
     ];
