@@ -34,11 +34,23 @@ document.addEventListener("DOMContentLoaded", function() {
             alt: "Shell Shocker Event Sale"
         },
         { 
-            // Ad 5: Fanttik
+            // Ad 6: Fanttik
             image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600", 
             link: "https://www.dpbolvw.net/click-101815247-17065965",
             alt: "Shell Shocker Event Sale"
-        }
+        },
+        { 
+            // Ad 7: STDCheck
+            image: "https://www.colormango.com/home-hobby/s_boxshot/stdcheck_153121.png", 
+            link: "https://www.dpbolvw.net/click-101815247-11680307",
+            alt: "STDCheck"
+        },
+        { 
+            // Ad 8: GameFly
+            image: "https://www.awltovhc.com/image-101815247-12500877", 
+            link: "https://www.anrdoezrs.net/click-101815247-12500877",
+            alt: "GameFly FreeTrial
+        }                 
     ];
 
     // Select a random ad
