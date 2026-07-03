@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Ad 6: Fanttik
             image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600", 
             link: "https://www.dpbolvw.net/click-101815247-17065965",
-            alt: "Shell Shocker Event Sale"
+            alt: "Fanttik"
         },
         { 
             // Ad 7: STDCheck
