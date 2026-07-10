@@ -49,8 +49,20 @@ document.addEventListener("DOMContentLoaded", function() {
             // Ad 8: GameFly
             image: "https://www.awltovhc.com/image-101815247-12500877", 
             link: "https://www.anrdoezrs.net/click-101815247-12500877",
-            alt: "GameFly FreeTrial
+            alt: "GameFly FreeTrial"
         }                 
+        { 
+            // Ad 9: Fresh Coffee Roaster
+            image: "https://www.ftjcfx.com/image-101815247-14515563", 
+            link: "https://www.anrdoezrs.net/click-101815247-14515563",
+            alt: "Fresh Coffee Roaster"
+        }     
+        { 
+            // Ad 10: Fresh Coffee Roaster
+            image: "https://www.ftjcfx.com/image-101815247-14515563", 
+            link: "https://www.anrdoezrs.net/click-101815247-14515563",
+            alt: "Fresh Coffee Roaster"
+        } 
     ];
 
     // Select a random ad
