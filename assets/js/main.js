@@ -49,6 +49,16 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "Fresh Coffee Roaster"
         },
         {
+            image: "https://www.tqlkg.com/image-101815247-15877593",
+            link: "https://www.kqzyfj.com/click-101815247-15877593",
+            alt: "SurfShark"
+        },
+        {
+            image: "https://www.ftjcfx.com/image-101815247-17303394",
+            link: "https://www.anrdoezrs.net/click-101815247-17303394",
+            alt: "NordVPN"
+        },
+        {
             image: "https://www.tqlkg.com/image-101815247-17267212",
             link: "https://www.jdoqocy.com/click-101815247-17267212",
             alt: "Abracadabranyc"
