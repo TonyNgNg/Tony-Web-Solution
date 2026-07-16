@@ -59,6 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "NordVPN"
         },
         {
+            image: "https://www.tqlkg.com/image-101815247-17034898",
+            link: "https://www.dpbolvw.net/click-101815247-17034898",
+            alt: "Steelseries"
+        },
+        {
+            image: "https://www.lduhtrp.net/image-101815247-17137908",
+            link: "https://www.anrdoezrs.net/click-101815247-17137908",
+            alt: "Wondershare"
+        },
+        {
             image: "https://www.tqlkg.com/image-101815247-17267212",
             link: "https://www.jdoqocy.com/click-101815247-17267212",
             alt: "Abracadabranyc"
