@@ -74,6 +74,31 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "SwitchBot"
         },
         {
+            image: "https://www.ftjcfx.com/image-101815247-17270064",
+            link: "https://www.kqzyfj.com/click-101815247-17270064",
+            alt: "Ashimary Hair"
+        },
+        {
+            image: "https://www.awltovhc.com/image-101815247-17242076",
+            link: "https://www.tkqlhce.com/click-101815247-17242076",
+            alt: "Fytoo"
+        },
+        {
+            image: "https://www.tqlkg.com/image-101815247-17068372",
+            link: "https://www.jdoqocy.com/click-101815247-17068372",
+            alt: "Kings Camo"
+        },
+        {
+            image: "https://www.ftjcfx.com/image-101815247-17310028",
+            link: "https://www.anrdoezrs.net/click-101815247-17310041",
+            alt: "Miles Direct"
+        },
+        {
+            image: "https://www.lduhtrp.net/image-101815247-15764166",
+            link: "https://www.jdoqocy.com/click-101815247-15764166",
+            alt: "Rexing"
+        },
+        {
             image: "https://www.ftjcfx.com/image-101815247-17267207",
             link: "https://www.anrdoezrs.net/click-101815247-17267207",
             alt: "Abracadabranyc"
