@@ -69,8 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "Wondershare"
         },
         {
-            image: "https://www.tqlkg.com/image-101815247-17267212",
-            link: "https://www.jdoqocy.com/click-101815247-17267212",
+            image: "https://www.tqlkg.com/image-101815247-17024108",
+            link: "https://www.anrdoezrs.net/click-101815247-17024108",
+            alt: "SwitchBot"
+        },
+        {
+            image: "https://www.ftjcfx.com/image-101815247-17267207",
+            link: "https://www.anrdoezrs.net/click-101815247-17267207",
             alt: "Abracadabranyc"
         }
     ];
