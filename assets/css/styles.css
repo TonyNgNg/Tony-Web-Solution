@@ -378,7 +378,7 @@ body.dark .card-slider .work { background: #0f172a; border-color: rgba(255,255,2
 }
 /* The X button for ads */
 .your-close-button-class {
-    transform: scale(0.75); /* Scales the button down to 75% of its original size */
+    transform: scale(0.50); /* Scales the button down to 75% of its original size */
 }
 
 /* Optional: Make layout more mobile-friendly */
@@ -444,11 +444,5 @@ body.dark .card-slider .work { background: #0f172a; border-color: rgba(255,255,2
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
-}
-
-/* Add this space at the bottom of your page so the ad doesn't block layout elements */
-.footer-ad-spacer {
-  height: 90px; 
-  width: 100%;
 }
 }
