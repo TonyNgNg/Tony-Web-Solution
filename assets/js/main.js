@@ -102,6 +102,26 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "https://www.ftjcfx.com/image-101815247-17267207",
             link: "https://www.anrdoezrs.net/click-101815247-17267207",
             alt: "Abracadabranyc"
+        },
+        {
+            image: "https://www.tqlkg.com/image-101815247-14046915",
+            link: "https://www.kqzyfj.com/click-101815247-14046915",
+            alt: "Discount School Supply!"
+        },
+        {
+            image: "https://www.tqlkg.com/image-101815247-17318226",
+            link: "https://www.dpbolvw.net/click-101815247-17318226",
+            alt: "Nanit"
+        },
+        {
+            image: "https://www.tqlkg.com/image-101815247-13467294",
+            link: "https://www.dpbolvw.net/click-101815247-13467294",
+            alt: "Wondershare"
+        },
+        {
+            image: "https://www.ftjcfx.com/image-101815247-17308151",
+            link: "https://www.dpbolvw.net/click-101815247-17308151",
+            alt: "Whokeys"
         }
     ];
 
