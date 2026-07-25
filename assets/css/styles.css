@@ -404,4 +404,51 @@ body.dark .card-slider .work { background: #0f172a; border-color: rgba(255,255,2
   .hero-art img {
     max-width: 90%;
   }
+  #sticky-bottom-ad {
+  position: fixed;   /* Forces the element to stay in place relative to the viewport */
+  bottom: 0;         /* Sticks it exactly to the bottom */
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffffff;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+  z-index: 999999;   /* Massive value guarantees it floats above all page content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 728px;  /* Standard leaderboard ad width */
+  height: 100%;
+}
+
+#ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Keeps your ad images from stretching awkwardly */
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Add this space at the bottom of your page so the ad doesn't block layout elements */
+.footer-ad-spacer {
+  height: 90px; 
+  width: 100%;
+}
 }
