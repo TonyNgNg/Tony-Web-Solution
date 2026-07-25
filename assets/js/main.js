@@ -140,4 +140,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadAd();
+    <script>
+  const ads = [
+    { img: "https://www.lduhtrp.net/image-101815247-17308144", url: "https://www.kqzyfj.com/click-101815247-17308144" },
+    { img: "https://www.awltovhc.com/image-101815247-14083236", url: "https://www.kqzyfj.com/click-101815247-14083236" },
+    { img: "https://www.tqlkg.com/image-101815247-17095298", url: "https://www.jdoqocy.com/click-101815247-17095298" }
+  ];
+
+  function loadRandomAd() {
+    const randomIndex = Math.floor(Math.random() * ads.length);
+    document.getElementById("ad-image").src = ads[randomIndex].img;
+    document.getElementById("ad-link").href = ads[randomIndex].url;
+  }
+
+  // Run the function as soon as the DOM finishes building
+  document.addEventListener("DOMContentLoaded", loadRandomAd);
+</script>
 });
