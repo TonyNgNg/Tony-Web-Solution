@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const ads = [
         {
-            image: "https://www.ftjcfx.com/image-101807649-17068393",
-            link: "https://www.kqzyfj.com/click-101807649-17068393",
-            alt: "Advertisement"
+            image: "https://www.lduhtrp.net/image-101815247-17243228",
+            link: "https://www.tkqlhce.com/click-101815247-17243228",
+            alt: "Biba"
         },
         {
             image: "https://www.awltovhc.com/image-101807649-13588852",
@@ -122,6 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
             image: "https://www.ftjcfx.com/image-101815247-17308151",
             link: "https://www.dpbolvw.net/click-101815247-17308151",
             alt: "Whokeys"
+        },
+        {
+            image: "https://www.awltovhc.com/image-101815247-17292718",
+            link: "https://www.kqzyfj.com/click-101815247-17292718",
+            alt: "KontrolFreaks"
         }
     ];
 
