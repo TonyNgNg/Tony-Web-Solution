@@ -19,14 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "OEDRO Sale"
         },
         {
-            image: "https://www.ftjcfx.com/image-101807649-17235977",
-            link: "https://www.tkqlhce.com/click-101807649-17235977",
-            alt: "Advertisement"
+            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=2055733.47&subid=0&type=4&gridnum=0",
+            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=2055733.47&subid=0&type=4",
+            alt: "Certified Piedmontese"
         },
         {
-            image: "https://promotions.newegg.com/NEemail/Apr-0-2021/FlashSaleSecondary_LBdi8d_07/img/banner3.png",
-            link: "https://click.linksynergy.com/deeplink?id=1aSwjBzRdaI&mid=44583&murl=https%3A%2F%2Fwww.newegg.com%2FShell-Shocker%2FEventSaleStore%2FID-10381",
-            alt: "Newegg Shell Shocker"
+            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.330&subid=0&type=4&gridnum=9",
+            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1786142.330&subid=0&type=4",
+            alt: "Newegg"
+        },
+        {
+            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.5&subid=0&type=4&gridnum=0",
+            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1930940.5&subid=0&type=4",
+            alt: "Samsung VTX US"
         },
         {
             image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600",
