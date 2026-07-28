@@ -158,17 +158,17 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       image: "https://www.lduhtrp.net/image-101815247-17308144",
       link: "https://www.kqzyfj.com/click-101815247-17308144",
-      alt: "Partner Offer 1"
+      alt: "Whokeys"
     },
     {
-      image: "https://www.awltovhc.com/image-101815247-14083236",
-      link: "https://www.kqzyfj.com/click-101815247-14083236",
-      alt: "Partner Offer 2"
+      image: "https://www.ftjcfx.com/image-101815247-17288759",
+      link: "https://www.jdoqocy.com/click-101815247-17288759",
+      alt: "Aliexpress"
     },
     {
-      image: "https://www.tqlkg.com/image-101815247-17095298",
-      link: "https://www.jdoqocy.com/click-101815247-17095298",
-      alt: "Partner Offer 3"
+      image: "https://www.tqlkg.com/image-101815247-15043134",
+      link: "https://www.jdoqocy.com/click-101815247-15043134",
+      alt: "UNice"
     }
   ];
 
