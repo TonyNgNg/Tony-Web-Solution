@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
             alt: "Newegg"
         },
         {
-            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.5&subid=0&type=4&gridnum=0",
-            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1930940.5&subid=0&type=4",
+            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.13&subid=0&type=4&gridnum=19",
+            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1930940.13&subid=0&type=4",
             alt: "Samsung VTX US"
         },
         {
