@@ -1,189 +1,210 @@
-const menuBtn=document.getElementById('menuBtn');const nav=document.getElementById('nav');if(menuBtn){menuBtn.addEventListener('click',()=>{const open=nav.style.display==='flex';nav.style.display=open?'none':'flex';menuBtn.setAttribute('aria-expanded',String(!open));});}nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<721)nav.style.display='none';}));document.getElementById('year').textContent=new Date().getFullYear();
+// Navigation Menu Toggle
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    const open = nav.style.display === 'flex';
+    nav.style.display = open ? 'none' : 'flex';
+    menuBtn.setAttribute('aria-expanded', String(!open));
+  });
+}
+
+nav?.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    if (window.innerWidth < 721) nav.style.display = 'none';
+  })
+);
+
+// Dynamic Footer Year
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
 // Random Popup Ad Script
 document.addEventListener("DOMContentLoaded", function () {
-
-    const ads = [
-        {
-            image: "https://www.lduhtrp.net/image-101815247-17243228",
-            link: "https://www.tkqlhce.com/click-101815247-17243228",
-            alt: "Biba"
-        },
-        {
-            image: "https://www.awltovhc.com/image-101807649-13588852",
-            link: "https://www.kqzyfj.com/click-101807649-13588852",
-            alt: "Coffee Quiz"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101807649-17310569",
-            link: "https://www.kqzyfj.com/click-101807649-17310569",
-            alt: "OEDRO Sale"
-        },
-        {
-            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=2055733.47&subid=0&type=4&gridnum=0",
-            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=2055733.47&subid=0&type=4",
-            alt: "Certified Piedmontese"
-        },
-        {
-            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.330&subid=0&type=4&gridnum=9",
-            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1786142.330&subid=0&type=4",
-            alt: "Newegg"
-        },
-        {
-            image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.13&subid=0&type=4&gridnum=19",
-            link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1930940.13&subid=0&type=4",
-            alt: "Samsung VTX US"
-        },
-        {
-            image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600",
-            link: "https://www.dpbolvw.net/click-101815247-17065965",
-            alt: "Fanttik"
-        },
-        {
-            image: "https://www.colormango.com/home-hobby/s_boxshot/stdcheck_153121.png",
-            link: "https://www.dpbolvw.net/click-101815247-11680307",
-            alt: "STDCheck"
-        },
-        {
-            image: "https://www.awltovhc.com/image-101815247-12500877",
-            link: "https://www.anrdoezrs.net/click-101815247-12500877",
-            alt: "GameFly Free Trial"
-        },
-        {
-            image: "https://www.ftjcfx.com/image-101815247-14515563",
-            link: "https://www.anrdoezrs.net/click-101815247-14515563",
-            alt: "Fresh Coffee Roaster"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-15877593",
-            link: "https://www.kqzyfj.com/click-101815247-15877593",
-            alt: "SurfShark"
-        },
-        {
-            image: "https://www.ftjcfx.com/image-101815247-17303394",
-            link: "https://www.anrdoezrs.net/click-101815247-17303394",
-            alt: "NordVPN"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-17034898",
-            link: "https://www.dpbolvw.net/click-101815247-17034898",
-            alt: "Steelseries"
-        },
-        {
-            image: "https://www.lduhtrp.net/image-101815247-17137908",
-            link: "https://www.anrdoezrs.net/click-101815247-17137908",
-            alt: "Wondershare"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-17024108",
-            link: "https://www.anrdoezrs.net/click-101815247-17024108",
-            alt: "SwitchBot"
-        },
-        {
-            image: "https://www.ftjcfx.com/image-101815247-17270064",
-            link: "https://www.kqzyfj.com/click-101815247-17270064",
-            alt: "Ashimary Hair"
-        },
-        {
-            image: "https://www.awltovhc.com/image-101815247-17242076",
-            link: "https://www.tkqlhce.com/click-101815247-17242076",
-            alt: "Fytoo"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-17068372",
-            link: "https://www.jdoqocy.com/click-101815247-17068372",
-            alt: "Kings Camo"
-        },
-        {
-            image: "https://www.ftjcfx.com/image-101815247-17310028",
-            link: "https://www.anrdoezrs.net/click-101815247-17310041",
-            alt: "Miles Direct"
-        },
-        {
-            image: "https://www.lduhtrp.net/image-101815247-15764166",
-            link: "https://www.jdoqocy.com/click-101815247-15764166",
-            alt: "Rexing"
-        },
-        {
-            image: "https://www.ftjcfx.com/image-101815247-17267207",
-            link: "https://www.anrdoezrs.net/click-101815247-17267207",
-            alt: "Abracadabranyc"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-14046915",
-            link: "https://www.kqzyfj.com/click-101815247-14046915",
-            alt: "Discount School Supply!"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-17318226",
-            link: "https://www.dpbolvw.net/click-101815247-17318226",
-            alt: "Nanit"
-        },
-        {
-            image: "https://www.tqlkg.com/image-101815247-13467294",
-            link: "https://www.dpbolvw.net/click-101815247-13467294",
-            alt: "Wondershare"
-        },
-        {
-            image: "https://www.ftjcfx.com/image-101815247-17308151",
-            link: "https://www.dpbolvw.net/click-101815247-17308151",
-            alt: "Whokeys"
-        },
-        {
-            image: "https://www.awltovhc.com/image-101815247-17292718",
-            link: "https://www.kqzyfj.com/click-101815247-17292718",
-            alt: "KontrolFreaks"
-        }
-    ];
-
-    const popup = document.getElementById("affiliatePopup");
-    const img = document.getElementById("popup-ad-image");
-    const link = document.getElementById("popup-ad-link");
-
-    if (!popup || !img || !link) return;
-
-    // Shuffle ads randomly
-    const shuffledAds = [...ads].sort(() => Math.random() - 0.5);
-
-    let currentIndex = 0;
-
-    function loadAd() {
-        if (currentIndex >= shuffledAds.length) {
-            popup.style.display = "none";
-            return;
-        }
-
-        const ad = shuffledAds[currentIndex];
-
-        img.onload = function () {
-            link.href = ad.link;
-            img.alt = ad.alt;
-            console.log("Loaded ad:", ad.alt);
-        };
-
-        img.onerror = function () {
-            console.warn("Failed image:", ad.image);
-            currentIndex++;
-            loadAd();
-        };
-
-        img.src = ad.image + (ad.image.includes("?") ? "&" : "?") + "cb=" + Date.now();
-    }
-
-    loadAd();
-    <script>
   const ads = [
-    { img: "https://www.lduhtrp.net/image-101815247-17308144", url: "https://www.kqzyfj.com/click-101815247-17308144" },
-    { img: "https://www.awltovhc.com/image-101815247-14083236", url: "https://www.kqzyfj.com/click-101815247-14083236" },
-    { img: "https://www.tqlkg.com/image-101815247-17095298", url: "https://www.jdoqocy.com/click-101815247-17095298" }
+    {
+      image: "https://www.lduhtrp.net/image-101815247-17243228",
+      link: "https://www.tkqlhce.com/click-101815247-17243228",
+      alt: "Biba"
+    },
+    {
+      image: "https://www.awltovhc.com/image-101807649-13588852",
+      link: "https://www.kqzyfj.com/click-101807649-13588852",
+      alt: "Coffee Quiz"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101807649-17310569",
+      link: "https://www.kqzyfj.com/click-101807649-17310569",
+      alt: "OEDRO Sale"
+    },
+    {
+      image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=2055733.47&subid=0&type=4&gridnum=0",
+      link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=2055733.47&subid=0&type=4",
+      alt: "Certified Piedmontese"
+    },
+    {
+      image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.330&subid=0&type=4&gridnum=9",
+      link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1786142.330&subid=0&type=4",
+      alt: "Newegg"
+    },
+    {
+      image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.13&subid=0&type=4&gridnum=19",
+      link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1930940.13&subid=0&type=4",
+      alt: "Samsung VTX US"
+    },
+    {
+      image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600",
+      link: "https://www.dpbolvw.net/click-101815247-17065965",
+      alt: "Fanttik"
+    },
+    {
+      image: "https://www.colormango.com/home-hobby/s_boxshot/stdcheck_153121.png",
+      link: "https://www.dpbolvw.net/click-101815247-11680307",
+      alt: "STDCheck"
+    },
+    {
+      image: "https://www.awltovhc.com/image-101815247-12500877",
+      link: "https://www.anrdoezrs.net/click-101815247-12500877",
+      alt: "GameFly Free Trial"
+    },
+    {
+      image: "https://www.ftjcfx.com/image-101815247-14515563",
+      link: "https://www.anrdoezrs.net/click-101815247-14515563",
+      alt: "Fresh Coffee Roaster"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-15877593",
+      link: "https://www.kqzyfj.com/click-101815247-15877593",
+      alt: "SurfShark"
+    },
+    {
+      image: "https://www.ftjcfx.com/image-101815247-17303394",
+      link: "https://www.anrdoezrs.net/click-101815247-17303394",
+      alt: "NordVPN"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17034898",
+      link: "https://www.dpbolvw.net/click-101815247-17034898",
+      alt: "Steelseries"
+    },
+    {
+      image: "https://www.lduhtrp.net/image-101815247-17137908",
+      link: "https://www.anrdoezrs.net/click-101815247-17137908",
+      alt: "Wondershare"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17024108",
+      link: "https://www.anrdoezrs.net/click-101815247-17024108",
+      alt: "SwitchBot"
+    },
+    {
+      image: "https://www.ftjcfx.com/image-101815247-17270064",
+      link: "https://www.kqzyfj.com/click-101815247-17270064",
+      alt: "Ashimary Hair"
+    },
+    {
+      image: "https://www.awltovhc.com/image-101815247-17242076",
+      link: "https://www.tkqlhce.com/click-101815247-17242076",
+      alt: "Fytoo"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17068372",
+      link: "https://www.jdoqocy.com/click-101815247-17068372",
+      alt: "Kings Camo"
+    },
+    {
+      image: "https://www.ftjcfx.com/image-101815247-17310028",
+      link: "https://www.anrdoezrs.net/click-101815247-17310041",
+      alt: "Miles Direct"
+    },
+    {
+      image: "https://www.lduhtrp.net/image-101815247-15764166",
+      link: "https://www.jdoqocy.com/click-101815247-15764166",
+      alt: "Rexing"
+    },
+    {
+      image: "https://www.ftjcfx.com/image-101815247-17267207",
+      link: "https://www.anrdoezrs.net/click-101815247-17267207",
+      alt: "Abracadabranyc"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-14046915",
+      link: "https://www.kqzyfj.com/click-101815247-14046915",
+      alt: "Discount School Supply!"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17318226",
+      link: "https://www.dpbolvw.net/click-101815247-17318226",
+      alt: "Nanit"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-13467294",
+      link: "https://www.dpbolvw.net/click-101815247-13467294",
+      alt: "Wondershare"
+    },
+    {
+      image: "https://www.ftjcfx.com/image-101815247-17308151",
+      link: "https://www.dpbolvw.net/click-101815247-17308151",
+      alt: "Whokeys"
+    },
+    {
+      image: "https://www.awltovhc.com/image-101815247-17292718",
+      link: "https://www.kqzyfj.com/click-101815247-17292718",
+      alt: "KontrolFreaks"
+    },
+    {
+      image: "https://www.lduhtrp.net/image-101815247-17308144",
+      link: "https://www.kqzyfj.com/click-101815247-17308144",
+      alt: "Partner Offer 1"
+    },
+    {
+      image: "https://www.awltovhc.com/image-101815247-14083236",
+      link: "https://www.kqzyfj.com/click-101815247-14083236",
+      alt: "Partner Offer 2"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17095298",
+      link: "https://www.jdoqocy.com/click-101815247-17095298",
+      alt: "Partner Offer 3"
+    }
   ];
 
-  function loadRandomAd() {
-    const randomIndex = Math.floor(Math.random() * ads.length);
-    document.getElementById("ad-image").src = ads[randomIndex].img;
-    document.getElementById("ad-link").href = ads[randomIndex].url;
+  const popup = document.getElementById("affiliatePopup");
+  const img = document.getElementById("popup-ad-image");
+  const link = document.getElementById("popup-ad-link");
+
+  if (!popup || !img || !link || ads.length === 0) return;
+
+  // Shuffle ads randomly on each load
+  const shuffledAds = [...ads].sort(() => Math.random() - 0.5);
+  let currentIndex = 0;
+
+  function loadAd() {
+    if (currentIndex >= shuffledAds.length) {
+      popup.style.display = "none";
+      return;
+    }
+
+    const ad = shuffledAds[currentIndex];
+
+    img.onload = function () {
+      link.href = ad.link;
+      img.alt = ad.alt || "Advertisement";
+      console.log("Loaded ad:", ad.alt);
+    };
+
+    img.onerror = function () {
+      console.warn("Failed image:", ad.image);
+      currentIndex++;
+      loadAd();
+    };
+
+    // Cache-busting timestamp ensures browsers load a fresh ad each visit
+    img.src = ad.image + (ad.image.includes("?") ? "&" : "?") + "cb=" + Date.now();
   }
 
-  // Run the function as soon as the DOM finishes building
-  document.addEventListener("DOMContentLoaded", loadRandomAd);
-</script>
+  loadAd();
 });
