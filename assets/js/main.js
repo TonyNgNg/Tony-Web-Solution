@@ -169,6 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://www.tqlkg.com/image-101815247-15043134",
       link: "https://www.jdoqocy.com/click-101815247-15043134",
       alt: "UNice"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17299413",
+      link: "https://www.jdoqocy.com/click-101815247-17299413",
+      alt: "Kijou"
     }
   ];
 
