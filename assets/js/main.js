@@ -26,19 +26,9 @@ if (yearEl) {
 document.addEventListener("DOMContentLoaded", function () {
   const ads = [
     {
-      image: "https://www.lduhtrp.net/image-101815247-17243228",
-      link: "https://www.tkqlhce.com/click-101815247-17243228",
-      alt: "Biba"
-    },
-    {
       image: "https://www.awltovhc.com/image-101807649-13588852",
       link: "https://www.kqzyfj.com/click-101807649-13588852",
       alt: "Coffee Quiz"
-    },
-    {
-      image: "https://www.tqlkg.com/image-101807649-17310569",
-      link: "https://www.kqzyfj.com/click-101807649-17310569",
-      alt: "OEDRO Sale"
     },
     {
       image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=2055733.47&subid=0&type=4&gridnum=0",
@@ -54,16 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.13&subid=0&type=4&gridnum=19",
       link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1930940.13&subid=0&type=4",
       alt: "Samsung VTX US"
-    },
-    {
-      image: "https://fanttik.com/cdn/shop/files/A_APP_1-1.jpg?v=1767698081&width=600",
-      link: "https://www.dpbolvw.net/click-101815247-17065965",
-      alt: "Fanttik"
-    },
-    {
-      image: "https://www.colormango.com/home-hobby/s_boxshot/stdcheck_153121.png",
-      link: "https://www.dpbolvw.net/click-101815247-11680307",
-      alt: "STDCheck"
     },
     {
       image: "https://www.awltovhc.com/image-101815247-12500877",
@@ -104,11 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://www.tqlkg.com/image-101815247-14046915",
       link: "https://www.kqzyfj.com/click-101815247-14046915",
       alt: "Discount School Supply!"
-    },
-    {
-      image: "https://www.tqlkg.com/image-101815247-13467294",
-      link: "https://www.dpbolvw.net/click-101815247-13467294",
-      alt: "Wondershare"
     },
     {
       image: "https://www.awltovhc.com/image-101815247-17292718",
