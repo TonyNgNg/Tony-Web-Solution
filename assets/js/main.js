@@ -114,6 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://www.awin1.com/cshow.php?s=4824335&v=66494&q=573723&r=3031011",
       link: "https://www.awin1.com/cread.php?s=4824335&v=66494&q=573723&r=3031011",
       alt: "Mooncool"
+    },
+    {
+      image: "https://www.tqlkg.com/image-101815247-17329785",
+      link: "https://www.dpbolvw.net/click-101815247-17329785",
+      alt: "Cheapvuelo"
     }
   ];
 
