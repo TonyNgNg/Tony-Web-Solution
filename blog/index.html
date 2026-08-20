@@ -148,28 +148,6 @@
     <section class="posts" id="postsContainer" aria-label="Recent posts">
       <!-- Posts will be loaded here -->
     </section>
-
-    <!-- Admin Guide -->
-    <section class="admin-guide">
-      <h3>📝 How to Add & Edit Blog Posts</h3>
-      <p><strong>To manage your blog content:</strong></p>
-      <ol style="margin:10px 0">
-        <li>Open the file: <code>blog/index.html</code> in your code editor</li>
-        <li>Find the <code>&lt;script&gt;</code> section at the bottom with the <code>defaultPosts</code> array</li>
-        <li><strong>To add a new post:</strong> Add a new object to the array:
-          <div style="background:rgba(255,255,255,0.05);padding:10px;border-radius:6px;margin:8px 0;font-size:0.85rem;overflow-x:auto">
-            <code>{id: 7, title: "Your Title", excerpt: "Summary here", content: "Full content...", date: "Aug 20, 2026", readTime: 5}</code>
-          </div>
-        </li>
-        <li><strong>To edit a post:</strong> Modify the text in the corresponding post object (don't change the ID)</li>
-        <li><strong>To delete a post:</strong> Remove the entire post object from the array</li>
-        <li>Save the file and commit to GitHub</li>
-        <li>Your site will automatically show the updated posts</li>
-      </ol>
-      <p style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(14,165,165,0.3)"><strong>💡 Tip:</strong> The posts are stored in JavaScript (browser localStorage) for now. Once you're ready for a permanent backend solution, I can help you migrate to a PHP/database system.</p>
-    </section>
-  </main>
-
   <!-- Post Detail Modal -->
   <div class="modal" id="postModal">
     <div class="modal-content">
