@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       alt: "Certified Piedmontese"
     },
     {
-      image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.330&subid=0&type=4&gridnum=9",
-      link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1786142.330&subid=0&type=4",
-      alt: "Newegg"
+      image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1562891.755&subid=0&type=4&gridnum=0",
+      link: "https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1562891.755&subid=0&type=4",
+      alt: "Kobo Clara Colour – Judge your books by their colors/colours"
     },
     {
       image: "https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1930940.13&subid=0&type=4&gridnum=19",
@@ -64,11 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://www.ftjcfx.com/image-101815247-17303394",
       link: "https://www.anrdoezrs.net/click-101815247-17303394",
       alt: "NordVPN"
-    },
-    {
-      image: "https://www.tqlkg.com/image-101815247-17034898",
-      link: "https://www.dpbolvw.net/click-101815247-17034898",
-      alt: "Steelseries"
     },
     {
       image: "https://www.lduhtrp.net/image-101815247-17137908",
