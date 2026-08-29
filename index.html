@@ -116,56 +116,200 @@
 </script>
 <!-- End Entry Pop-Up Ad -->
 <!-- ========================================== -->
-<!-- AFFILIATE BANNER CODE START -->
+<!-- RESPONSIVE AFFILIATE BANNERS -->
 <!-- ========================================== -->
+
 <style>
+  /* ================================
+     LEFT AFFILIATE BANNER
+  ================================= */
+
   .left-affiliate-banner {
     position: fixed;
     left: 10px;
-    top: 90px; /* Adjusted to sit nicely below your sticky navigation bar */
+    top: 90px;
+    width: 120px;
     z-index: 9999;
   }
-  
-  /* Hides the ad on screens narrower than 1200px so it doesn't overlap your text */
-  @media (max-width: 1200px) {
-    .left-affiliate-banner {
-      display: none;
-    }
+
+  .left-affiliate-banner a {
+    display: block;
   }
-</style>
 
-<div class="left-affiliate-banner">
-  <a href="https://www.tkqlhce.com/click-101815247-17034900" target="_top">
-    <img src="https://www.ftjcfx.com/image-101815247-17034900" width="120" height="600" alt="" border="0"/>
-  </a>
-</div>
-<!-- ========================================== -->
-<!-- AFFILIATE BANNER LEFT CODE END -->
-<!-- ========================================== -->
+  .left-affiliate-banner img {
+    display: block;
+    width: 120px;
+    height: 600px;
+    max-width: 100%;
+    object-fit: contain;
+    border: 0;
+  }
 
-<!-- Floating Right Affiliate Banner -->
-<style>
+
+  /* ================================
+     RIGHT AFFILIATE BANNER
+  ================================= */
+
   .sticky-right-banner {
     position: fixed;
-    right: 10px;       /* Distance from the right browser edge */
-    top: 90px;        /* <-- ADJUST THIS NUMBER to match your other banner */
-    z-index: 99999;    
+    right: 10px;
+    top: 90px;
+    width: 120px;
+    z-index: 9999;
   }
 
-  /* Keeps it hidden on mobile screens so it doesn't block text */
-  @media screen and (max-width: 1200px) {
+  .sticky-right-banner a {
+    display: block;
+  }
+
+  .sticky-right-banner img {
+    display: block;
+    width: 120px;
+    height: 600px;
+    max-width: 100%;
+    object-fit: contain;
+    border: 0;
+  }
+
+
+  /* =================================
+     TABLETS
+  ================================= */
+
+  @media (max-width: 1200px) {
+
+    .left-affiliate-banner,
     .sticky-right-banner {
-      display: none;
+      top: 85px;
+      width: auto;
+    }
+
+    .left-affiliate-banner {
+      left: 5px;
+    }
+
+    .sticky-right-banner {
+      right: 5px;
+    }
+
+    .left-affiliate-banner img,
+    .sticky-right-banner img {
+      width: auto;
+      height: 42vh;
+      max-height: 430px;
+      min-height: 220px;
+    }
+  }
+
+
+  /* =================================
+     MOBILE PHONES
+  ================================= */
+
+  @media (max-width: 700px) {
+
+    .left-affiliate-banner,
+    .sticky-right-banner {
+      display: block;
+      top: 90px;
+      width: auto;
+    }
+
+    .left-affiliate-banner {
+      left: 2px;
+    }
+
+    .sticky-right-banner {
+      right: 2px;
+    }
+
+    .left-affiliate-banner img,
+    .sticky-right-banner img {
+      width: auto;
+      height: 35vh;
+      max-height: 300px;
+      min-height: 180px;
+    }
+  }
+
+
+  /* =================================
+     SMALL PHONES
+  ================================= */
+
+  @media (max-width: 480px) {
+
+    .left-affiliate-banner {
+      left: 1px;
+    }
+
+    .sticky-right-banner {
+      right: 1px;
+    }
+
+    .left-affiliate-banner img,
+    .sticky-right-banner img {
+      height: 29vh;
+      max-height: 240px;
+      min-height: 150px;
+    }
+  }
+
+
+  /* =================================
+     VERY SMALL PHONES
+  ================================= */
+
+  @media (max-width: 360px) {
+
+    .left-affiliate-banner img,
+    .sticky-right-banner img {
+      height: 25vh;
+      max-height: 200px;
+      min-height: 130px;
     }
   }
 </style>
 
-<div class="sticky-right-banner">
- <a target="_blank" href="https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1786142.246&subid=0&type=4">
- <IMG border="0" alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.246&subid=0&type=4&gridnum=10">
- </a>
+<!-- LEFT AFFILIATE BANNER -->
+
+<div class="left-affiliate-banner">
+  <a
+    href="https://www.tkqlhce.com/click-101815247-17034900"
+    target="_blank"
+    rel="nofollow sponsored noopener noreferrer"
+  >
+    <img
+      src="https://www.ftjcfx.com/image-101815247-17034900"
+      width="120"
+      height="600"
+      alt="Affiliate advertisement"
+      loading="lazy"
+    >
+  </a>
 </div>
-<!-- End Floating Banner Right side -->
+
+<!-- RIGHT AFFILIATE BANNER -->
+
+<div class="sticky-right-banner">
+  <a
+    href="https://click.linksynergy.com/fs-bin/click?id=1aSwjBzRdaI&offerid=1786142.246&subid=0&type=4"
+    target="_blank"
+    rel="nofollow sponsored noopener noreferrer"
+  >
+    <img
+      src="https://ad.linksynergy.com/fs-bin/show?id=1aSwjBzRdaI&bids=1786142.246&subid=0&type=4&gridnum=10"
+      width="120"
+      height="600"
+      alt="Newegg affiliate advertisement"
+      loading="lazy"
+    >
+  </a>
+</div>
+
+<!-- ========================================== -->
+<!-- END AFFILIATE BANNERS -->
+<!-- ========================================== -->
   <section id="home" class="section hero">
     <div class="container hero-grid">
       <div class="hero-text">
