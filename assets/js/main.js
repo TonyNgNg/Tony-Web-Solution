@@ -106,14 +106,29 @@ document.addEventListener("DOMContentLoaded", function () {
       alt: "Kijou"
     },
     {
-      image: "https://www.awin1.com/cshow.php?s=4824335&v=66494&q=573723&r=3031011",
-      link: "https://www.awin1.com/cread.php?s=4824335&v=66494&q=573723&r=3031011",
+      image: "https://www.awin1.com/cshow.php?s=4712835&v=66494&q=573723&r=3031011",
+      link: "https://www.awin1.com/cread.php?s=4712835&v=66494&q=573723&r=3031011",
       alt: "Mooncool"
     },
     {
       image: "https://www.tqlkg.com/image-101815247-17329785",
       link: "https://www.dpbolvw.net/click-101815247-17329785",
       alt: "Cheapvuelo"
+    },
+    {
+      image: "https://www.awin1.com/cshow.php?s=3495427&v=18808&q=386371&r=3031011",
+      link: "https://www.awin1.com/cread.php?s=3495427&v=18808&q=386371&r=3031011",
+      alt: "RentCars"
+    },
+    {
+      image: "https://www.awin1.com/cshow.php?s=4382635&v=45915&q=570758&r=3031011",
+      link: "https://www.awin1.com/cread.php?s=4382635&v=45915&q=570758&r=3031011",
+      alt: "FNTCase"
+    },
+    {
+      image: "https://www.awin1.com/cshow.php?s=4878644&v=128579&q=609305&r=3031011",
+      link: "https://www.awin1.com/cread.php?s=4878644&v=128579&q=609305&r=3031011",
+      alt: "Everblog"
     }
   ];
 
