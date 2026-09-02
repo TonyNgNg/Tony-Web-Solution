@@ -129,6 +129,11 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://www.awin1.com/cshow.php?s=4878644&v=128579&q=609305&r=3031011",
       link: "https://www.awin1.com/cread.php?s=4878644&v=128579&q=609305&r=3031011",
       alt: "Everblog"
+    },
+    {
+      image: "https://imp.pxf.io/i/2726043/3921459/11352",
+      link: "https://bluehost.sjv.io/c/2726043/3921459/11352",
+      alt: "Bluehost"
     }
   ];
 
