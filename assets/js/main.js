@@ -56,21 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alt: "Fresh Coffee Roaster"
     },
     {
-      image: "https://www.tqlkg.com/image-101815247-15877593",
-      link: "https://www.kqzyfj.com/click-101815247-15877593",
-      alt: "SurfShark"
-    },
-    {
-      image: "https://www.ftjcfx.com/image-101815247-17303394",
-      link: "https://www.anrdoezrs.net/click-101815247-17303394",
-      alt: "NordVPN"
-    },
-    {
-      image: "https://www.lduhtrp.net/image-101815247-17137908",
-      link: "https://www.anrdoezrs.net/click-101815247-17137908",
-      alt: "Wondershare"
-    },
-    {
       image: "https://www.awltovhc.com/image-101815247-17242076",
       link: "https://www.tkqlhce.com/click-101815247-17242076",
       alt: "Fytoo"
@@ -134,6 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "https://imp.pxf.io/i/2726043/3921459/11352",
       link: "https://bluehost.sjv.io/c/2726043/3921459/11352",
       alt: "Bluehost"
+    },
+    {
+      image: "https://www.awin1.com/cshow.php?s=4499079&v=45751&q=580105&r=3031011",
+      link: "https://www.awin1.com/cread.php?s=4499079&v=45751&q=580105&r=3031011",
+      alt: "GMK Tec"
     }
   ];
 
